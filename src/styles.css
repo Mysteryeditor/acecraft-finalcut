@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* for the nav bar in the homepage */
+#navbar{
+    background-color: black;
+    border-radius: 0;
+    padding: 2px;
+}
+.p-menuitem-text {
+ color: grey;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: 500;
+ margin-top: 9px;
+  }
+
+  .p-menuitem-text:hover {
+    color: azure;
+     }
+
