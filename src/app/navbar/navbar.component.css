@@ -1,0 +1,13 @@
+@import "primeicons/primeicons.css";
+#acecraft{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 300px;
+    text-decoration: none;
+    color: azure;
+    letter-spacing: 10px;
+}
+
+.card .navmenu{
+    color:aqua;
+}
