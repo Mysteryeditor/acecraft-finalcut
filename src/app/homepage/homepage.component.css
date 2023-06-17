@@ -1,5 +1,88 @@
-#twocards{
-    background-color: black;
+
+#banner1div {
+    position: absolute;
+    z-index: 1;
+    left: 40%;
+    border: 1px solid white;
+ 
+    margin-top: -340px;
+    width: 330px;
+    text-align: center;
+    line-height: 30px;
+    height: 100px;
+}
+
+#p1,#p2{
+    
+    font-size: 30px;
+    color: gray;
+    font-family: 'Proxima Nova', sans-serif;
 }
 
 
+
+#p2{
+    font-weight: 800;
+}
+
+#college{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    width: 300px;
+    left: 5%;
+    margin-top: 30px;
+    font-weight: 600;
+
+}
+
+#college:hover{
+    color: black;
+}
+
+#collegeid{
+    font-size: 14px;
+    position: relative;
+    animation: mymove 1s infinite;
+}
+
+@keyframes mymove {
+    0%{
+        left:0px;
+    }
+    15%{
+        left:3px;
+    }
+    30%{
+        left:5px;
+    }
+    45%{
+        left:7px;
+    }
+    60%{
+        left:5px;
+    }
+    75%{
+        left:3px;
+    }
+    90%{
+        left:1px;
+    }
+    100%{
+        left:0px;
+    }
+  }
+
+#twocards {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+
+/* #twocards img:hover{
+    scale:inherit ;
+    behavior: smooth;
+    overflow: hidden;
+
+} */

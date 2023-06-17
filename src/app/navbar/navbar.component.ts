@@ -14,9 +14,9 @@ export class NavbarComponent implements OnInit{
   ngOnInit() {
       this.items = [
           { label: 'SCHOOL', styleClass:'navmenu'},
-          { label: 'COLLEGE', icon: 'pi pi-fw pi-calendar' },
-          { label: 'ENTERPRISE', icon: 'pi pi-fw pi-pencil' },
-          { label: 'NOTES', icon: 'pi pi-fw pi-file' },
+          { label: 'COLLEGE' },
+          { label: 'ENTERPRISE' },
+          { label: 'NOTES', icon: 'fa-circle',styleClass:"notes-icon" },
           { label: 'AIREN MASK', icon: 'pi pi-fw pi-cog' }
       ];
 
@@ -27,8 +27,8 @@ export class NavbarComponent implements OnInit{
       this.activeItem = event;
   }
 
-  activateLast() {
-      this.activeItem = this.items[this.items.length - 1];
-  }
+  // for the sidebar    
+  dropdownVisible: boolean = true;
+  
 
 }

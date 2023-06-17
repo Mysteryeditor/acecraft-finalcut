@@ -14,4 +14,20 @@
   .p-menuitem-text:hover {
     color: azure;
      }
+     .p-menuitem-icon {
+      display: none;
+    }
 
+     .notes-icon::after {
+      content: '\f111'; 
+      font-family: 'FontAwesome'; 
+      margin-left: -10px;
+      margin-top: 25px;
+      font-size: 6px;
+      color:rgb(182, 105, 241) ; 
+    }
+
+   /* .p-sidebar{
+    margin-top: 120px;
+    
+   } */
