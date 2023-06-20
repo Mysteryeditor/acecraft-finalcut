@@ -1,6 +1,16 @@
 <div class="card col-lg-4 offset-lg-4 flex justify-content-center">
-    <p-card id="login-card"  header="SignUp with ACECRAFT">
-       
-        
+    <p-card id="login-card" header="SignUp with ACECRAFT">
+        <form action="#" [formGroup]="signup" no-validate>
+            <input class="form-control" formControlName="firstname" [ngClass]="{'is-invalid':firstname.errors && (firstname.touched||firstname.dirty),
+        'is-valid':firstname.valid}" placeholder="First Name" type="text">
+
+            <div class="invalid-feedback">
+                <strong>Username is Required</strong>
+
+            </div>
+
+            <button (click)="onSubmit()" type="submit">Submit</button>
+        </form>
+
     </p-card>
 </div>

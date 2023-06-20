@@ -15,8 +15,6 @@ import { SigninComponent } from './signin/signin.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms'
-// import { Validators } from '@angular/forms'
-import{FormControl} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
