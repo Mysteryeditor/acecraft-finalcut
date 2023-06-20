@@ -1,0 +1,18 @@
+.form-check-input:hover{
+    border-color: rgb(98, 236, 236) !important;
+}
+
+.form-check-input[type=radio]:checked{
+    color: black !important;
+}
+
+ @media only screen and (min-width : 992px) {
+    #logincard-parent{
+        border: 1px solid rgb(228, 228, 228);
+        
+    }
+
+    
+ }
+ 
+ 

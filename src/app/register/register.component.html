@@ -1,16 +1,116 @@
-<div class="card col-lg-4 offset-lg-4 flex justify-content-center">
+<div class="container my-5 shadow-sm " id="logincard-parent">
+    <div class="card shadow my-5 col-lg-4 offset-lg-4 flex justify-content-center">
     <p-card id="login-card" header="SignUp with ACECRAFT">
-        <form action="#" [formGroup]="signup" no-validate>
-            <input class="form-control" formControlName="firstname" [ngClass]="{'is-invalid':firstname.errors && (firstname.touched||firstname.dirty),
-        'is-valid':firstname.valid}" placeholder="First Name" type="text">
+        <form [formGroup]="signup" no-validate>
+            <div class="form-Group mb-3"><!-- firstname -->
+                <input type="text" class="form-control" formControlName="firstname" [ngClass]="{'is-invalid':firstname.errors && (firstname.touched||firstname.dirty),
+        'is-valid':firstname.valid}" placeholder="First Name">
 
-            <div class="invalid-feedback">
-                <strong>Username is Required</strong>
-
+                <div class="invalid-feedback">
+                    <strong *ngIf="firstname.errors?.['required']">firstname is Required</strong>
+                </div>
             </div>
 
-            <button (click)="onSubmit()" type="submit">Submit</button>
+            <div class="form-Group mb-3"><!-- lastname -->
+                <input type="text" class="form-control" formControlName="lastname" [ngClass]="{'is-invalid':lastname.errors && (lastname.touched||lastname.dirty),
+        'is-valid':lastname.valid}" placeholder="Last Name">
+
+                <div class="invalid-feedback">
+                    <strong>lastname is Required</strong>
+                </div>
+            </div>
+
+            <div class="form-Group mb-3"><!-- email -->
+                <input type="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid':email.errors && (email.touched||email.dirty),
+        'is-valid':email.valid}" placeholder="email">
+
+                <div class="invalid-feedback">
+                    <strong>email is Required</strong>
+                </div>
+            </div>
+
+            <div class="form-Group mb-3"><!--password-->
+                <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':password.errors && (password.touched||password.dirty),
+        'is-valid':password.valid}" placeholder="password">
+
+                <div class="invalid-feedback">
+                    <strong>password is Required</strong>
+                </div>
+            </div>
+
+            <div class="form-Group mb-3"><!--password-->
+                <input type="password" class="form-control" formControlName="confirmpassword" [ngClass]="{'is-invalid':confirmpassword.errors && (confirmpassword.touched||confirmpassword.dirty),
+        'is-valid':confirmpassword.valid}" placeholder="Confirm Password">
+
+                <div class="invalid-feedback">
+                    <strong>confirm password is Required</strong>
+                </div>
+            </div>
+
+            <!-- radio button -->
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="form-check">
+                  <input class="form-check-input border border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault1" >
+                  <label class="form-check-label text-secondary fw-bold" for="flexRadioDefault1">
+                    School
+                  </label>
+                </div>
+                <div class="form-check ms-5 my-5">
+                  <input class="form-check-input border border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                  <label class="form-check-label text-secondary fw-bold" for="flexRadioDefault2">
+                    Enterprise
+                  </label>
+                </div>
+              </div>
+              
+            <div class="form-Group mb-3"><!--dealership name-->
+                <input type="text" class="form-control" formControlName="dealername" [ngClass]="{'is-invalid':dealername.errors && (dealername.touched||dealername.dirty),
+        'is-valid':dealername.valid}" placeholder="Dealership Name">
+
+                <div class="invalid-feedback">
+                    <strong>Dealer Name is Required</strong>
+                </div>
+            </div>
+
+            <div class="form-Group mb-3"><!--dealership number-->
+                <input type="text" class="form-control" formControlName="dealernumber" [ngClass]="{'is-invalid':dealernumber.errors && (dealernumber.touched||dealernumber.dirty),
+        'is-valid':dealernumber.valid}" placeholder="Dealership Number/Code">
+
+                <div class="invalid-feedback">
+                    <strong>Dealer Number is Required</strong>
+                </div>
+            </div>
+
+            <div class="form-Group mb-3"><!-- state -->
+                <label style="color: gray;font-weight: bold;">State</label>
+                <select class="form-select" aria-label="Default select example">
+                     <option selected></option> 
+                    <option *ngFor="let s of statelist" [value]=s>{{s}}</option>
+                  </select>
+            </div>
+
+
+            <div class="form-Group mb-3"><!--GST number-->
+                <input type="text" class="form-control" formControlName="gstnumber" [ngClass]="{'is-invalid':gstnumber.errors && (gstnumber.touched||gstnumber.dirty),
+        'is-valid':gstnumber.valid}" placeholder="GST Number">
+
+                <div class="invalid-feedback">
+                    <strong>GST Number is Required</strong>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="form-group">
+                <button (click)="onSubmit()" type="submit">Submit</button>
+            </div>
         </form>
 
     </p-card>
+</div>
 </div>
