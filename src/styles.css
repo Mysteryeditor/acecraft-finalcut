@@ -27,6 +27,14 @@
       color:rgb(182, 105, 241) ; 
     }
 
+    /* for the login page */
+    .p-card .p-card-body {
+      background-color: rgb(247, 247, 247) !important;
+    }
+
+    .p-card .p-card-title{
+      color: gray;
+    }
    /* .p-sidebar{
     margin-top: 120px;
     

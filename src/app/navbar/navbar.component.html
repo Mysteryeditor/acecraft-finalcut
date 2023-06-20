@@ -6,8 +6,8 @@
 <i class="pi pi-cog px-3 "(mouseleave)="dropdownVisible = true"  (mouseover)="dropdownVisible = false" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
 <i class="pi pi-shopping-cart  px-3" pBadge value="0" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
 <ul [hidden]="dropdownVisible" (mouseover)="dropdownVisible = false" (mouseleave)="dropdownVisible = true" class="dropdown ">
-    <li><a href="">Sign-In</a><i class="fa-solid fa-right-to-bracket"></i></li>
-    <li><a href="">Register</a><i class="fa-solid fa-user-plus"></i></li>
+    <li><a routerLink="signin">Sign-In</a><i class="fa-solid fa-right-to-bracket"></i></li>
+    <li><a routerLink="register">Register</a><i class="fa-solid fa-user-plus"></i></li>
     <li><a href="">Order Status</a><i class="fa-solid fa-box-archive"></i></li>
     <li><a href="">Contact</a><i class="fa-solid fa-comments"></i></li>
     </ul>
@@ -15,17 +15,8 @@
 </div>
 
 
-<!-- <div class="card flex flex-wrap justify-content-center gap-2">
- 
 
-    <p-sidebar [(visible)]="sidebarVisible" position="right" id="rightsidebar">
-        <p><a href="">Sign-In</a></p>
-        <p><a href="">Register</a></p>
-        <p><a href="">Order Status</a></p>
-        <p><a href="">Contact</a></p>
-    </p-sidebar> 
 
 
 
    
-</div> -->

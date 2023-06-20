@@ -11,13 +11,21 @@ import { CardModule } from 'primeng/card';
 import { FooterComponent } from './footer/footer.component';
 import { CollegeComponent } from './college/college.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SigninComponent } from './signin/signin.component';
+import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms'
+// import { Validators } from '@angular/forms'
+import{FormControl} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomepageComponent,
     FooterComponent,
-    CollegeComponent
+    CollegeComponent,
+    SigninComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +34,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BadgeModule,
     CardModule,
     SidebarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // FormControl,
+    // FormGroup
+    // Validators
   ],
   providers: [],
   bootstrap: [AppComponent]
