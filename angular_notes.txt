@@ -1,0 +1,507 @@
+Angular Notes:
+
+
+day1:12/6/2023
+First version was called as Angular JS or Angular 1.0-had so many disadvantages-developers did a rework
+Second version was totally new when compared with 1st version.
+No Angular three.
+
+Current version is Angular 15-released 16/11/2022.
+Angular 16 is to be launched soon!
+
+Latest version of angular is used to develop mobile applications.
+
+Owned By Google
+
+
+Angular follows DOM-component based-SPA.
+ROUTING
+
+
+
+
+1.Installing Angular:
+npm install -g @angular/cli@latest
+
+ng-Next/new Generation of HTML
+
+
+
+Combination of HTML,CSS,JS & TS.
+TypeScript is more preferrable but we can create an entire application in angular just by using JS.
+
+
+Installing TS
+
+npm install -g typescript
+
+
+Testing packages are installed
+Jasmine-Karma
+
+TO CREATE A NEW APP:
+ng new <applicationname>
+ng n <applicationname>
+
+change/switch to the directory and type (Code .) to open the folder in vs code
+
+Environment.ts-the api urls can be placed here.//i didnt get
+
+main.ts-entry point,slightly similar to main()
+
+polyfills.ts-responsible to fix the browser compatible issues.//i didnt get
+
+test.ts-the default test cases,written for main.ts
+
+.gitignore-has the list of files that should be ignored when the git push is occured.
+
+
+angular.json:Entire information abut the file structure is present as KEY-VALUE pairs.
+prefix-changing the name of the app folder.
+options:
+
+
+package.json:
+The available dependencies are present in this file.
+dependencies<=>Header Files
+
+readme.md:Self explainatory file that says about the project.
+
+The default port is 4200.
+
+Commands:
+ng serve=>To execute/start the angular applications.
+ng serve -o=>To open the application.
+ng build=>To check whether the file has no errors.
+
+
+Components:4 files
+1 (app-component.html)-UI
+2 (app-component.css)-Styles for the above component
+3 (app.component.ts)-Logical - Dynamic Functionality
+4 (app.component.spec.ts)-Testing file
+
+
+@=>The Decorator.
+
+styles.css=>The global styling that gets applied to index.html.
+
+
+Installing Bootstrap in Angular:
+step 1:Install Bootstrap via npm
+npm install bootstrap
+
+step 2:Placing the paths of Css file  and Js file in the angular.json
+
+step3:Yeah it works!
+
+-----------------------------------------------------
+day2 : 13/6/2023
+Creating component
+ng generate component <component_name>//creates the name in lowercase
+ng g c <component name>
+
+
+The selectors can be element selector,class selectors and can be used inside a div
+One more thing we can use a attribute selector
+
+eg:<div app-home>
+
+in the ts page:
+@component({
+selector:'[app-home]'
+})
+
+
+working of module.ts:
+declarations:[created by the dev]
+imports:[using the existing modules]
+
+
+Routing:
+1.)Import the necessary modules
+2.)In the app-routing-module.ts
+
+const routes:Routes=[{
+path:"componentname",component:<Componentname>Component
+}
+];
+
+using routerLink we can route the components;
+
+DataBinding in Angular:
+Update View ->update the component
+new Data(component)->update the view
+
+Types:
+1.)Interpolation
+2.)Property Binding
+3.)Event Binding
+4.)Two Way Binding
+
+
+Categories:
+One-way:
+Data Flows in a single direction(one direction).
+
+i)component=>View
+
+a.)Interpolation->Angular Interpolation->String Interpolation
+{{ name }} 
+name==>Template Expression->converted to string
+Template expression can be a property or a method
+
+b.)Property Binding:(style,attribute,class)
+Depicted by square brackets.
+bind-src can be used to bind the url.
+Example:
+<h4 [innerText]="title"></h4>
+Note:Content Security
+For the prevention of sql injection and script injection.
+SCRIPT TAGS are detected by default in ANGULAR.
+
+ii)View=>Component
+a.)Event Binding:click,keystrokes,hover,etc
+events are depicted by paranthesis
+
+<button (click)="<function>;<function2>"></Button>
+-----------------------------------------------------
+Day3 : 14/6/2023
+
+event payload-$event
+When the user is to pass the information its used.
+
+html part:<input (input)="method($event)">
+<p>{{ the variable}}</p>
+
+ts part:
+value=' '
+
+getValue(event:any){
+this.value=(event.target as HTMLInputElement).value;
+}
+event.target//this property does the job
+
+
+Template reference Variable In Event Binding:#val
+Template variable is prefixed with #.
+Looks like a attribute.
+html part:<input #<variable name> (input)="method($event)">
+<p>{{ value}}</p>
+
+ts part:
+value=' '
+
+getValue(<variable>:any){
+this.value=<variable>.value;
+}
+
+Key event filtering:
+Single key and We can give a combination of keys
+html part:
+<input (keyup)="value2=$any($event.target).value">
+<p>{{value2}}</p>
+
+ts part:
+value2=' '
+
+Same thing for keyup.enter
+Once the enter key is pressed the event will be triggered.
+
+The same for keyup.control.shift.enter.
+
+Two Way Binding:
+combination of property and event binding.
+Component(Model)<->View
+Depicted By:[()]
+
+ngModel-Directive
+Its not present implicitly.
+FormsModule should be imported.
+Used To implement two way binding.
+Else an error is occured
+-----------------------------------------------------------
+Day4:15/6/2023
+------------------------------------
+Directives:
+----------------------
+3 Types:
+----------
+1.)Component->html/css/spec/ts
+@component=>Decorator class
+selector;template(html);css
+To Generate:
+ng g c <componentname>
+
+2.)Structural:
+Changing the layout by adding/removing DOM elements.
+prefix-*
+
+*ngFor(looping):
+---------------------
+html part:
+li *ngFor="let identifier of arrayname"
+string interpolation
+identifier.propertyname
+
+ts part:
+arrayName:ClassName[]=[];
+____________________________________________________
+ngSwitch(selection):*ngSwitchCase,*ngSwitchDefault
+--------------------------
+[ngSwitch]->No star(*);
+
+htmlpart:
+input [(ngModel)]="num"
+div[ngSwitch]="num"
+<div *ngSwitchCase="1"></div>
+.
+.
+.
+<div *ngSwitchDefault>Default values</div>
+
+ts part:
+num=0;
+____________________________________________________
+*ngIf(if else)
+html part:
+*ngIf="<boolean expression>"
+
+
+3.)Atribute:
+ngModel(Two-way Binding->FormsModules)
+
+ngStyle(Changing the style dynamically)
+
+[ngStyle]="{property:<variable>}"
+
+
+ngClass(Binding the class)
+[ngClass]="<method that returns a class name>or <classname>"
+
+Importing json file:
+import * as <alias> from <path>
+<arrayname>:any=(<alias> as any).default
+
+Custom Directives:
+We can create our own directives for our functionalities
+step1:.js file
+step2:class->@directive->our functionality
+
+
+Day5:17/6/2023
+Pipes:
+-------
+Functions that are used in template expression that transforms the input & returns the transformed value.
+{{<template variable> | <pipe>}}
+We can use double pipes
+{{<template variable> | <pipe>|<pipe>}}
+1.)DatePipe:
+2.)UpperCasePipe:
+3.)LowerCasePipe:
+4.)CurrencyPipe:
+----------	
+{{variable| currency:'INR'}}
+Default is usd
+
+5.)DecimalPipe or number:
+{{variable | number:'<no of digits before the point>.<range of digits after the point>'}}
+
+6.)PercentPipe:
+{{variable|percent}}
+7.)TitleCase:
+Capitalizes the first letter of each word in the template expression.
+8.)json
+9.)slice:
+----------	
+{{variable |slice:<index-start>:<index end>}}
+
+Creating A Custom Pipe
+ng g pipe <pipe_name>
+
+A ts file will be generated.
+
+transform(value:<datatype>):<returntype>{
+return value*value;
+}
+---------------------------------
+Component Communication in Angular:
+-->Parent-Child
+-->Child-Parent
+
+@Input-Receiving info
+@Output-Sending info
+-----------------------
+in the parent html
+-----------------------
+<child selector 
+<some-propertypassed>  (<methodname>EventEmitter)="<parentcomponent_method>($event)">
+
+______________________________________________________________________
+<methodname>EventEmitter is a instance created in the child component |
+______________________________________________________________________|
+--------------------
+ in the parent ts
+---------------------
+some-propertypassed:[]
+
+parentcomponentmethod(receiving parameter:type){
+debugger;
+Swal.fire(data);
+}
+
+--------------------
+in the child html:
+--------------------
+methodName(property:type)* will be invoked.
+--------------------
+in the child ts
+-----------------
+These should be imported(Input,Output,OnInit,EventEmitter)
+
+@Input() the data is received
+property:Array[type]=[];//for looping and creating a ui
+
+
+@output()//we need this to send
+<methodname>EventEmitter=new EventEmitter();//this is an interface to carryon the property
+-----------------------------------------------------------------------------------------------------------------------------------|
+|<methodname>EventEmitter is an instance which will be used as a event-binder in the parent component  |
+-----------------------------------------------------------------------------------------------------------------------------------|
+methodName(property:type)*{
+this.<methodname>EventEmitter.emit(property:type);//emit is a method that belongs to the eventEmitter interface
+}
+-----------------------------------
+Day:6 20/6/2023
+---------------------
+Angular Forms:
+-|-|-|-|-|-|-|-|-|-
+1)Input fields(html)->BIND->.ts
+2)Tracks changes in your component.
+3)Built-in Validators
+4.)Custom Validator class  or directives are created.
+
+Building Blocks of Forms:
+->Formcontrol
+	Used in the case of Single Input Field.
+	Eg:Subscribe Modals.
+->FormGroup
+	Used in collection of form controls
+	Eg:Registration Forms.
+->FormArray
+	Sets the values.
+	Eg:Registration Forms->Role:(admin,user)
+	Setting the default role can be done using formarray.
+
+Types:
+--------
+1)Template-Driven Form:
+------------------------------
+->Form->Design->Setup->ngForm
+->Binding=>ngModel
+=>The form values are stored in a template reference vaiable given  in the form tag.
+
+->Advantages=>Lesscode,Easy,Perfect for very small forms.
+->Disadvantages:
+=>Adding controls dynamically is difficult when compared with reactive forms.
+=>Writing test cases becomes challenging.
+
+example:
+<form #trv="ngForm" (ngSubmit)="#trv.form.valid && onSubmit(#trv)" novalidate>
+                  ^
+	|
+	|
+	Template reference
+
+
+form-group=>name and input-field ,invalid-feedback
+input-field:
+=>required
+=>class="form-control"
+=>should be named
+=>[(ngModel)]="<instance_name>.<property>"
+=>#templaterefvariable="ngModel"
+=>[ngClass]="{'is-invalid':trf.submitted && templaterefvariable.invalid} "
+=>div class="invalid-feedback" *ngIf="trf.submitted && templaterefvariable.invalid"
+=>div <p *ngIf="templaterefvariable.errors.<validation-type>">...</p>
+
+ts part:
+class{
+the set of variables and types.
+}
+
+instance_name=new classname()
+
+Notes:
+-<> The form that is designed will be setup using the ngForm directive
+-<>Has default validators
+-<>Custom validators should be in the form of directives.
+
+
+
+2)Reactive-Forms/Model Driven forms:
+------------------------------------------------
+--->ReactiveFormsModule should be imported.
+--->Custom validators are created in the form of functions.
+--->FormControl,FormGroup,FormArray should be inported to be used.
+--->Validators component must be imported ______!important
+
+6 built-in validator properties:
+1.)valid
+2.)invalid
+3.)touched (focused(clicked) or not)
+4.)untouched
+5.)dirty (modified or not)
+6.)pristine
+
+1.)No class is created,just the properties are defined.
+2.)Input fields must have a formControlName
+For age:
+Validators.min(18);
+
+Example:
+html:
+
+form [formGroup]="<propertyname>" no-validate
+input formControlName="property_name"
+[ngClass]="{
+'is-invalid':property_name.errors && property_name.touched || property_name.dirty),
+'is-valid':property_name.valid}"
+
+div class=invalid-feedback
+
+<strong *ngIf="propertyname.errors?.propertyname">error messgae</strong>
+
+propertyname.errors?.
+
+{{myForm1 | json}}
+
+
+
+
+
+ts:
+<property_name>:FormGroup
+property_name:FormControl | any;
+
+ngOnInit()
+{
+this.usrename=new FormControl(''
+[Validators.required,
+Validators.minlength(10),
+Validators.maxlength(20)]")
+}
+
+this.myForm1=new FormGroup([
+propertyname:this.property_name])
+
+
+
+
+
+
+
+
+
+
+
