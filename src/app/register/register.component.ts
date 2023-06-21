@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms'
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -110,7 +111,12 @@ export class RegisterComponent implements OnInit {
 
 
   onSubmit() {
-
+    Swal.fire({
+      icon:'success',
+      title:'Registered SuccessFully',
+      showConfirmButton:false,
+      timer:2000
+    });
     console.log("helo");
   }
 }

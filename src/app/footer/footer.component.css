@@ -9,7 +9,11 @@ a:hover{
     color: azure;
 }
 
-#footlinks .col-lg-2{
-    border-right: 1px solid white;
-    margin-bottom: 10px;
+@media only  screen and (min-width:968px) {
+    #footlinks .col-lg-2{
+        border-right: 1px solid white;
+        margin-bottom: 10px;
+    }
+    
 }
+
