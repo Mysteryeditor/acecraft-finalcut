@@ -2,7 +2,7 @@
 #banner1div {
     position: absolute;
     z-index: 1;
-    left: 40%;
+    /* left: 40%; */
     border: 1px solid white;
  
     margin-top: -340px;
@@ -83,6 +83,7 @@
     border: 2px solid rgb(255, 255, 255);
     padding: 25px;
     line-height: 15px;
+    margin-top: 700px;
 }
 
 

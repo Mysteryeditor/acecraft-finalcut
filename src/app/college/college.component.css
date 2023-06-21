@@ -48,6 +48,25 @@ margin-top: 250px;
     font-size: 23px;
 }
 
+/* for the layer2 */
+#nce_para{
+    font-size: 15px;
+}
+
+#sublayercontent{
+   margin-top: 300px;
+   
+}
+
+#sublayercontent .card-text{
+    line-height: 35px !important;
+    color: #898689;
+}
+
+#carosel-layer{
+    color: #978f8f;
+}
+
 #getintouch{
     border:1px solid white;
     background-color: transparent;
@@ -71,4 +90,11 @@ right: auto;
     color: rgb(0, 0, 0);
     margin: 15px auto 0 !important;
     width: 400px;
+}
+
+@media only screen and (min-width:320px) and (max-width:500px) {
+    .card{
+        display: none;
+        
+     }
 }
