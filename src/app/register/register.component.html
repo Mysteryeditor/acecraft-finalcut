@@ -1,116 +1,165 @@
+{{signup.valid}}
+
 <div class="container my-5 shadow-sm " id="logincard-parent">
     <div class="card shadow my-5 col-lg-4 offset-lg-4 flex justify-content-center">
-    <p-card id="login-card" header="SignUp with ACECRAFT">
-        <form [formGroup]="signup" no-validate>
-            <div class="form-Group mb-3"><!-- firstname -->
-                <input type="text" class="form-control" formControlName="firstname" [ngClass]="{'is-invalid':firstname.errors && (firstname.touched||firstname.dirty),
+        <p-card id="login-card" header="SignUp with ACECRAFT">
+            <form [formGroup]="signup" no-validate>
+                <!-- firstname -->
+                <div class="form-Group mb-3">
+                    <input type="text" class="form-control" formControlName="firstname" [ngClass]="{'is-invalid':firstname.errors && (firstname.touched||firstname.dirty),
         'is-valid':firstname.valid}" placeholder="First Name">
 
-                <div class="invalid-feedback">
-                    <strong *ngIf="firstname.errors?.['required']">firstname is Required</strong>
+                    <div class="invalid-feedback">
+                        <strong *ngIf="firstname.errors?.['required']">Firstname is Required</strong>
+                        <strong *ngIf="firstname.errors?.['minlength']">Must be 3 characters long</strong>
+                        <strong *ngIf="firstname.errors?.['maxlength']">Must Not Exceed 20 characters</strong>
+                        <strong *ngIf="firstname.errors?.['pattern']">Must Contain only Alphabets</strong>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-Group mb-3"><!-- lastname -->
-                <input type="text" class="form-control" formControlName="lastname" [ngClass]="{'is-invalid':lastname.errors && (lastname.touched||lastname.dirty),
+                <!-- lastname -->
+                <div class="form-Group mb-3">
+                    <input type="text" class="form-control" formControlName="lastname" [ngClass]="{'is-invalid':lastname.errors && (lastname.touched||lastname.dirty),
         'is-valid':lastname.valid}" placeholder="Last Name">
 
-                <div class="invalid-feedback">
-                    <strong>lastname is Required</strong>
+                    <div class="invalid-feedback">
+                        <strong *ngIf="lastname.errors?.['required']">lastname is Required</strong>
+                        <strong *ngIf="lastname.errors?.['minlength']">Must be 3 characters long</strong>
+                        <strong *ngIf="lastname.errors?.['maxlength']">Must Not Exceed 20 characters</strong>
+                        <strong *ngIf="lastname.errors?.['pattern']">Must Contain only Alphabets</strong>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-Group mb-3"><!-- email -->
-                <input type="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid':email.errors && (email.touched||email.dirty),
+                <!-- email -->
+                <div class="form-Group mb-3">
+                    <input type="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid':email.errors && (email.touched||email.dirty),
         'is-valid':email.valid}" placeholder="email">
 
-                <div class="invalid-feedback">
-                    <strong>email is Required</strong>
-                </div>
-            </div>
+                    <div class="invalid-feedback">
+                        <strong *ngIf="email.errors?.['required']">Email is Required</strong>
+                        <strong *ngIf="email.errors?.['email']">Enter a Valid Email</strong>
 
-            <div class="form-Group mb-3"><!--password-->
-                <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':password.errors && (password.touched||password.dirty),
+                    </div>
+                </div>
+
+                <!--password-->
+                <div class="form-Group mb-3">
+                    <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':password.errors && (password.touched||password.dirty),
         'is-valid':password.valid}" placeholder="password">
 
-                <div class="invalid-feedback">
-                    <strong>password is Required</strong>
+                    <div class="invalid-feedback">
+                        <strong *ngIf="password.errors?.['required']">Please Enter A Password</strong>
+                        <strong *ngIf="password.errors?.['minlength']">Too Small,8 Characters Please</strong>
+                        <!-- <strong *ngIf="password.errors?.['pattern']">Too Weak :(</strong> -->
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-Group mb-3"><!--password-->
-                <input type="password" class="form-control" formControlName="confirmpassword" [ngClass]="{'is-invalid':confirmpassword.errors && (confirmpassword.touched||confirmpassword.dirty),
+                <!--Confirm password-->
+                <!-- <div class="form-Group mb-3">
+                    <input type="password" class="form-control" formControlName="confirmpassword" [ngClass]="{'is-invalid':confirmpassword.errors && (confirmpassword.touched||confirmpassword.dirty),
         'is-valid':confirmpassword.valid}" placeholder="Confirm Password">
 
-                <div class="invalid-feedback">
-                    <strong>confirm password is Required</strong>
-                </div>
-            </div>
+                    <div class="invalid-feedback">
+                        <strong>confirm password is Required</strong>
+                    </div>
+                </div> -->
 
-            <!-- radio button -->
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="form-check">
-                  <input class="form-check-input border border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault1" >
-                  <label class="form-check-label text-secondary fw-bold" for="flexRadioDefault1">
-                    School
-                  </label>
+                <!-- radio button -->
+
+                <div class="d-flex justify-content-center align-items-center form-Group">
+
+                    <span class="my-4">
+                        <input class="radio" value="school" name="schenter" formControlName="schenter" type="radio"
+                            [ngClass]="{'is-invalid':schenter.errors && (schenter.touched||schenter.dirty),
+                  'is-valid':schenter.valid}" id="sc">
+                        <label class=" me-5 text-secondary fw-bold" for="sc">
+                            School
+                        </label>
+                    </span>
+
+                    <span>
+                        <input class="radio " [ngClass]="{'is-invalid':schenter.errors && (schenter.touched||schenter.dirty),
+                  'is-valid':schenter.valid}" s value="enterprise" name="schenter" formControlName="schenter"
+                            type="radio" id="ep">
+                        <label for="ep" class=" text-secondary fw-bold">
+                            Enterprise
+                        </label>
+                    </span>
+
+                    <div class="invalid-feedback">
+                        <strong *ngIf="schenter.errors?.['required']">Please Choose One</strong>
+                    </div>
                 </div>
-                <div class="form-check ms-5 my-5">
-                  <input class="form-check-input border border-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                  <label class="form-check-label text-secondary fw-bold" for="flexRadioDefault2">
-                    Enterprise
-                  </label>
-                </div>
-              </div>
-              
-            <div class="form-Group mb-3"><!--dealership name-->
-                <input type="text" class="form-control" formControlName="dealername" [ngClass]="{'is-invalid':dealername.errors && (dealername.touched||dealername.dirty),
+
+
+                <!--dealership name-->
+                <div class="form-Group mb-3">
+                    <input type="text" class="form-control" formControlName="dealername" [ngClass]="{'is-invalid':dealername.errors && (dealername.touched||dealername.dirty),
         'is-valid':dealername.valid}" placeholder="Dealership Name">
 
-                <div class="invalid-feedback">
-                    <strong>Dealer Name is Required</strong>
+                    <div class="invalid-feedback">
+                        <strong *ngIf="dealername.errors?.['required']">Dealer Name is Required</strong>
+                        <strong *ngIf="dealername.errors?.['minlength']">Too small for a Dealer Name</strong>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-Group mb-3"><!--dealership number-->
-                <input type="text" class="form-control" formControlName="dealernumber" [ngClass]="{'is-invalid':dealernumber.errors && (dealernumber.touched||dealernumber.dirty),
+                <!--dealership number-->
+                <div class="form-Group my-3">
+                    <input type="text" class="form-control" formControlName="dealernumber" [ngClass]="{'is-invalid':dealernumber.errors && (dealernumber.touched||dealernumber.dirty),
         'is-valid':dealernumber.valid}" placeholder="Dealership Number/Code">
 
-                <div class="invalid-feedback">
-                    <strong>Dealer Number is Required</strong>
+                    <div class="invalid-feedback">
+                        <strong>Dealer Number is Required</strong>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-Group mb-3"><!-- state -->
-                <label style="color: gray;font-weight: bold;">State</label>
-                <select class="form-select" aria-label="Default select example">
-                     <option selected></option> 
+                <!-- city -->
+                <div class="form-Group my-4">
+                    <input type="text" class="form-control" formControlName="city" [ngClass]="{'is-invalid':city.errors && (city.touched||city.dirty),
+        'is-valid':city.valid}" placeholder="City">
+
+                    <div class="invalid-feedback">
+                        <strong>Enter Your City</strong>
+                    </div>
+                </div>
+
+                <!-- state -->
+                <div class="form-Group my-4">
+                <label class="text-secondary fw-bold">State</label>
+                <select [ngClass]="{'is-invalid':statename.errors && (statename.touched||statename.dirty),
+                'is-valid':statename.valid}" formControlName="statename"  class="form-select" aria-label="Default select example">
+                     
                     <option *ngFor="let s of statelist" [value]=s>{{s}}</option>
                   </select>
-            </div>
 
-
-            <div class="form-Group mb-3"><!--GST number-->
-                <input type="text" class="form-control" formControlName="gstnumber" [ngClass]="{'is-invalid':gstnumber.errors && (gstnumber.touched||gstnumber.dirty),
-        'is-valid':gstnumber.valid}" placeholder="GST Number">
-
-                <div class="invalid-feedback">
-                    <strong>GST Number is Required</strong>
+                  <div class="invalid-feedback">
+                    <strong>Choose a State</strong>
                 </div>
             </div>
 
 
+                <!--GST number-->
+                <div class="form-Group my-4">
+                    <input type="text" class="form-control" formControlName="gstnumber" [ngClass]="{'is-invalid':gstnumber.errors && (gstnumber.touched||gstnumber.dirty),
+        'is-valid':gstnumber.valid}" placeholder="GST Number">
+
+                    <div class="invalid-feedback">
+                        <strong *ngIf="gstnumber.errors?.['required']">Enter A GST Number</strong>
+                    </div>
+                </div>
 
 
 
 
 
 
-            <div class="form-group">
-                <button (click)="onSubmit()" type="submit">Submit</button>
-            </div>
-        </form>
 
-    </p-card>
-</div>
+
+                <div class="form-group">
+                    <button class="bg-dark col-12 text-white" (click)="onSubmit()" [disabled]="signup.invalid" type="submit">Register</button>
+                </div>
+            </form>
+<label class="text-secondary my-3 col-lg-7 col-md-6 offset-md-4 offset-lg-3">Already have an account?<a class="text-decoration-none text-dark" routerLink="/signin">Login!</a></label>
+        </p-card>
+    </div>
 </div>
