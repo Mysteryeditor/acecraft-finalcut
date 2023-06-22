@@ -496,10 +496,143 @@ this.myForm1=new FormGroup([
 propertyname:this.property_name])
 
 
+Day:7 22/6/2023
+Creating  a custom validator:
+Directive: 
+ng g c <validatorname>
+
+AbstractControl,Validator,NG-VALIDATORS:To be imported from @angular/forms
+
+providers[{
+provide:NG_VALIDATORS,
+useExisting:<Name>
+multi:true
+}]
+
+
+ export class implements validator{
+validate(control:AbstractControl):{
+[key:string]:any}|null
+{
+if(control.value && control.value.length !=10)
+{
+return{
+phoneNumberInvalid:true
+}}}}
+
+There is no need to import the directive
+
+Creating a validator in the form of function:
+
+shared-->folder
+ng g c <component> shared/
+
+creating a new ts file in shared folder
+import{AbstractControl}
+
+export function <name>(control:AbstractControl){
+if(!condition){
+return{invalidMail:true};
+}
+return null;
+}
+
+
+the <functionname> must be imported in the respective .ts files
+
+
+Query Parameters In Angular:
+->Called Query Strings
+->Generated in URL
+->Optional Parameter -> Pagination,sorting,Filter,search
+->Key-Value pair
+->one of the observables
+
+stream of data<- Observables(wrapper around the stream of data)
+->emits async data
+->to access the Observables<-User must subscribe(data.subscribe(...))->Consume the data
+
+Route vs Query params:
+Route Paramters-Required
+Query Params-Optional
+
+Steps for query Paramater:
+
+step1:Adding Query Param:
+1.Added in the form of routerLink attribute
+ [routerLink]="['<name>']"
+[queryParams]="{<...>:<...>}" one of the Observables.
+
+
+
+2.)router.navigate()
+
+3.)router.navigateByUrl
+
+
+step2:Reading the Query Parameter:
+ActivatedRoute,Router =>Imported
+using snapshot.queryMap property=>present inside activatedRoute
 
 
 
 
+we must inject Activatedroute and router
+
+constructor(private activatedroute:ActivatedRoute,private router:Router)
+
+ngOnInit(){
+this.snapshotpageno=this.activatedroute.snapshot.queryParamMap.get('pagenum')||0;
+
+
+this.activatedroute.queryParamMap.subscribe((params)=>{
+this.page=+params.get('pagenum')||0;
+})
+}
+
+nextPage()
+{
+this.router.navigate(['courselist'],{
+queryParams:{pageNum:this.pageNo+1}
+})
+}
+
+Parameterized Routing:
+-----------------------------
+Route Parameters:
+----------------------
+using ActivatedRoute
+in the path inside routes
+<componentname>/:<parameter>
+
+in the [routerLink]="['/componentname',id]"
+
+to get the id,
+we can use paramMap.get('id')//returns a string (or)
+
+ngOnInit(){
+this.route.paramMap.subscribe((params:ParamMap)=>{//returns a number
+this.id=+params.get('id');
+})}
+
+
+--------------------------------------------------------------------------------------------
+Nested Components;
+creating components:
+ng g c <parentcomponent>
+
+ng g c <parentcomponent>/<childcomponent>
+
+routing-module.ts:
+path:
+children[
+path:]
+
+html routerLink
+
+routerLink="/parent/child"
+
+/parent is optional
 
 
 

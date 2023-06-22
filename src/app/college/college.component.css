@@ -1,27 +1,28 @@
-#layer1{
-background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/College-11.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-/* background-position: left; */
-padding-bottom: 250px;
+#layer1 {
+    background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/College-11.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: left; */
+    padding-bottom: 250px;
 }
- 
-#content{
-    color: gray;
-margin-top: 250px;  
-} 
 
-#content .content1{
+#content {
+    color: gray;
+    margin-top: 250px;
+}
+
+#content .content1 {
     font-size: 20px;
     line-height: 17px !important;
 }
+
 /* the classic absolute signature */
-#cas{
+#cas {
     word-spacing: 20px;
     font-size: 24px;
 }
 
-#layer3{
+#layer3 {
     background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/College-3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,50 +30,50 @@ margin-top: 250px;
     padding-bottom: 400px; */
 }
 
-#layer3content{
+#layer3content {
     padding-top: 300px;
     color: gray;
     line-height: 15px;
     padding-bottom: 300px;
 }
 
-#line1{
+#line1 {
     font-size: 25px;
 }
 
-#line2{
+#line2 {
     font-size: 20px;
 }
 
-#line3{
+#line3 {
     font-size: 23px;
 }
 
 /* for the layer2 */
-#nce_para{
+#nce_para {
     font-size: 15px;
 }
 
-#sublayercontent{
-   margin-top: 300px;
-   
+#sublayercontent {
+    margin-top: 300px;
+
 }
 
-#sublayercontent .card-text{
+#sublayercontent .card-text {
     line-height: 35px !important;
     color: #898689;
 }
 
-#carosel-layer{
+#carosel-layer {
     color: #978f8f;
 }
 
-#getintouch{
-    border:1px solid white;
+#getintouch {
+    border: 1px solid white;
     background-color: transparent;
     font-size: 15px;
     padding: 12px;
-    font-weight:600
+    font-weight: 600
 }
 
 /* the modal */
@@ -83,7 +84,7 @@ right: auto;
     
 } */
 
-.modal-header .modal-title{
+.modal-header .modal-title {
     text-align: center !important;
     font-size: 24px !important;
     vertical-align: middle;
@@ -92,9 +93,8 @@ right: auto;
     width: 400px;
 }
 
-@media only screen and (min-width:320px) and (max-width:500px) {
-    .card{
+@media only screen and (min-width:320px) and (max-width:600px) {
+    .card {
         display: none;
-        
-     }
+    }
 }

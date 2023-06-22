@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit{
       this.items = [
           { label: 'SCHOOL', styleClass:'navmenu'},
           { label: 'COLLEGE',routerLink:'college' },
-          { label: 'ENTERPRISE' },
+          { label: 'ENTERPRISE',routerLink:'enterprise' },
           { label: 'NOTES', icon: 'fa-circle',styleClass:"notes-icon" },
           { label: 'AIREN MASK', icon: 'pi pi-fw pi-cog' }
       ];

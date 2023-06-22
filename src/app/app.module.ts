@@ -14,7 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SigninComponent } from './signin/signin.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { EnterpriseComponent } from './enterprise/enterprise.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     FooterComponent,
     CollegeComponent,
     SigninComponent,
-    RegisterComponent
+    RegisterComponent,
+    EnterpriseComponent
   ],
   imports: [
     BrowserModule,
