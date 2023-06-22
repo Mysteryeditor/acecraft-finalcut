@@ -66,6 +66,8 @@
 
 #carosel-layer {
     color: #978f8f;
+    /* aspect-ratio: 3/2; */
+    /* object-fit: contain !important; */
 }
 
 #getintouch {
