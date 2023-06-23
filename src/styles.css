@@ -19,12 +19,12 @@
     }
 
      .notes-icon::after {
-      content: '\f111'; 
-      font-family: 'FontAwesome'; 
+      content: '\f111';
+      font-family: 'FontAwesome';
       margin-left: -10px;
       margin-top: 25px;
       font-size: 6px;
-      color:rgb(182, 105, 241) ; 
+      color:rgb(182, 105, 241) ;
     }
 
     /* for the login page */
@@ -38,14 +38,16 @@
       color: gray;
     }
 
+  /* for the timeline in enterprise */
 
-    
+
+
    /* .p-sidebar{
     margin-top: 120px;
-    
+
    } */
 
-    /* Extra Small Devices, Phones */ 
+    /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
 
 }

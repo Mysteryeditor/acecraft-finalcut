@@ -1,7 +1,69 @@
-<div class="container-fluid">
-    <div class="row">
-        <img class="img-fluid mx-auto" style="width: 213px;" src="https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/honda.png" height="50" alt="">
+<div class="container-fluid" id="layer1enter">
+    <div class="row" style="background-color: white;">
+        <img class="img-fluid mx-auto" style="width: 213px;"
+            src="https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/honda.png" height="50" alt="">
         <p class="text-center" id="honda">Honda Car's Dealer manpower uniform</p>
     </div>
 
+    <div class="row" style="padding-top: 300px; padding-bottom: 300px;">
+        <h2 class="text-center">Workwear that works</h2>
+
+    </div>
+
+
+
+</div>
+
+<!-- the 3 cards -->
+<div class="container-fluid" id="cardslayer">
+    <div class="row">
+        <div class="text-center">
+            <h1 class="text-black">Work Relaxed</h1>
+            <p>When we designed our uniforms, we wore them to work every day.
+            </p>
+            <p> We still do. They're comfy, relaxed and designed to suit your workplace.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row d-flex">
+            <div class="card  mb-5 col-lg-4 col-md-4 col-sm-12 text-center" *ngFor="let c1 of cards_arr"
+                style="background-image: url({{c1.img}});">
+                <h5 class="card-text">{{c1.head}}</h5>
+                <h3 class="card-text fw-light">{{c1.content}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="container">
+        
+<div class="card bg-black">
+    <p-timeline [value]="events" layout="horizontal" align="top" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+            
+
+            
+            <span class="custom-marker text-white shadow-2" >
+                <span>{{event.icon}}</span>
+            </span>
+
+          
+        </ng-template>
+    
+        <ng-template let-event pTemplate="content">  
+            <img class="img-fluid"style="height: 200px;width:30%" src="{{event.image}}" alt="">   
+             </ng-template>
+
+
+ 
+    
+
+
+
+    </p-timeline>
+</div>
+    </div>
 </div>

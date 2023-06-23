@@ -1,3 +1,40 @@
 #honda{
     text-transform: uppercase;
 }
+
+#layer1enter{
+    background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* the cards layer */
+#cardslayer{
+    background-color: #dadada;
+    padding: 3%;
+}
+
+/* for the p tags */
+#cardslayer p{
+    font-size: 15px;
+    line-height: 15px;
+}
+
+#cardslayer .card{
+    /* background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Enterprises-2.png) !important; */
+    background-position: center !important;
+    /* background-size: 180%; */
+    max-width: 300px;
+    margin: auto;
+    height: 300px;
+    justify-content: center;
+    color: #978989;
+    transition: transform 0.3s ease;
+    box-shadow: 6px 6px 6px 6px;
+}
+
+#cardslayer .card:hover{
+    transform: scale(0.9);
+}
+

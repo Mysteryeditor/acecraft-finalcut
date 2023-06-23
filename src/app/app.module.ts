@@ -8,6 +8,7 @@ import { TabMenuModule } from 'primeng/tabmenu';
 import { BadgeModule } from 'primeng/badge';
 import { HomepageComponent } from './homepage/homepage.component';
 import { CardModule } from 'primeng/card';
+import { TimelineModule } from 'primeng/timeline';
 import { FooterComponent } from './footer/footer.component';
 import { CollegeComponent } from './college/college.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,6 +38,7 @@ import { EnterpriseComponent } from './enterprise/enterprise.component'
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    TimelineModule
     // FormControl,
     // FormGroup
     // Validators
