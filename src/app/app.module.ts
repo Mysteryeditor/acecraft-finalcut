@@ -16,7 +16,11 @@ import { SigninComponent } from './signin/signin.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { EnterpriseComponent } from './enterprise/enterprise.component'
+import { EnterpriseComponent } from './enterprise/enterprise.component';
+import { NotesComponent } from './notes/notes.component';
+import { AirenMaskComponent } from './airen-mask/airen-mask.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ButtonModule } from 'primeng/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,10 @@ import { EnterpriseComponent } from './enterprise/enterprise.component'
     CollegeComponent,
     SigninComponent,
     RegisterComponent,
-    EnterpriseComponent
+    EnterpriseComponent,
+    NotesComponent,
+    AirenMaskComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,10 @@ import { EnterpriseComponent } from './enterprise/enterprise.component'
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    TimelineModule
+    TimelineModule,
+    SidebarModule,
+    ButtonModule
+    
     // FormControl,
     // FormGroup
     // Validators

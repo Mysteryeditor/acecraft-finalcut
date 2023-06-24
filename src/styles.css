@@ -38,6 +38,12 @@
       color: gray;
     }
 
+    /* the sidebar in the sm screen */
+.p-sidebar {
+  background-color: white !important;
+}
+
+
   /* for the timeline in enterprise */
 
 
@@ -48,7 +54,15 @@
    } */
 
     /* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
+@media only screen and (min-width : 480px) and (max-width:767px) {
+
+.p-tabmenu-nav-content,ul {
+ display: none;
+     }
+ 
+ 
+
+     
 
 }
 

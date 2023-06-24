@@ -38,3 +38,12 @@
     transform: scale(0.9);
 }
 
+#final-layer{
+    background-color: black;
+}
+#final-layer .row{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 650px;
+
+}

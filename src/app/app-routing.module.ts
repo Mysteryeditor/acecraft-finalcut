@@ -5,12 +5,16 @@ import { CollegeComponent } from './college/college.component';
 import { SigninComponent } from './signin/signin.component';
 import { RegisterComponent } from './register/register.component';
 import { EnterpriseComponent } from './enterprise/enterprise.component';
+import { NotesComponent } from './notes/notes.component';
+import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 const routes: Routes = [
   { path:'', component :HomepageComponent },
   {path:'college' ,component:CollegeComponent},
   {path:'signin',component:SigninComponent},
   {path:'register',component:RegisterComponent},
-  {path:'enterprise',component:EnterpriseComponent}
+  {path:'enterprise',component:EnterpriseComponent},
+  {path:'blogs',component:NotesComponent},
+  {path:'am',component:AirenMaskComponent}
 ];
 
 @NgModule({

@@ -27,6 +27,7 @@
     background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/College-3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center ;
     /* padding-top: 400px;
     padding-bottom: 400px; */
 }
@@ -36,6 +37,12 @@
     color: gray;
     line-height: 15px;
     padding-bottom: 300px;
+}
+
+#layer3 .container{
+   justify-content: center;
+   text-align: center;
+
 }
 
 #line1 {

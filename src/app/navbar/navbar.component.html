@@ -1,7 +1,12 @@
-
-<div id="navbar" class="card justify-content-center flex flex-wrap align-items-center container-fluid sticky-top">
+<div class="container-fluid">
+<div class="row" style="background-color:black;">
+    <div class="col-1 mt-2 ml-1 d-lg-none">
+        <app-sidebar></app-sidebar>
+    </div>
+<div id="navbar" class="card col justify-content-center flex flex-wrap align-items-center container-fluid sticky-top">
     <a class="mt-3" id="acecraft" href="#">acecraft</a>
-<p-tabMenu  [model]="items" [activeItem]="activeItem" (activeItemChange)="onActiveItemChange($event)"></p-tabMenu>
+    
+<p-tabMenu  [model]="items" [activeItem]="activeItem" ></p-tabMenu>
 <span class="flex flex-row ml-auto px-5">
 <i class="pi pi-cog px-3 "(mouseleave)="dropdownVisible = true"  (mouseover)="dropdownVisible = false" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
 <i class="pi pi-shopping-cart  px-3" pBadge value="0" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
@@ -13,7 +18,9 @@
     </ul>
 </span>
 </div>
+</div>
 
+</div>
 
 
 

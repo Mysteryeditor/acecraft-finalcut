@@ -21,6 +21,8 @@ export class EnterpriseComponent {
   }
 
   
+colbg: any[]=['url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Untitled-1.png)',
+'url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Untitled-2.png)']
 
 }
 

@@ -36,11 +36,11 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 
-    <div class="container">
-        
-<div class="card bg-black">
+    <div class="container"> -->
+
+<!-- <div class="card bg-black">
     <p-timeline [value]="events" layout="horizontal" align="top" styleClass="customized-timeline">
         <ng-template pTemplate="marker" let-event>
             
@@ -65,5 +65,12 @@
 
     </p-timeline>
 </div>
+    </div>
+</div> -->
+
+
+<div class="container-fluid" id="final-layer">
+    <div class="row" [ngStyle]="{'background-image':b1}" *ngFor="let b1 of colbg" >
+       
     </div>
 </div>
