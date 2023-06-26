@@ -43,6 +43,19 @@
   background-color: white !important;
 }
 
+/* for the setting sidebar */
+
+/* .p-sidebar-mask{
+  background-color: rgba(210, 204, 204, 0.666) !important;
+
+} */
+
+.sidebarnav{
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
 
   /* for the timeline in enterprise */
 

@@ -25,6 +25,7 @@ import { SchoolComponent } from './school/school.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowseComponent } from './browse/browse.component';
 import { ListComponent } from './browse/list/list.component';
+import { SettingsSidebarComponent } from './settings-sidebar/settings-sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { ListComponent } from './browse/list/list.component';
     SidebarComponent,
     SchoolComponent,
     BrowseComponent,
-    ListComponent
+    ListComponent,
+    SettingsSidebarComponent
   ],
   imports: [
     BrowserModule,

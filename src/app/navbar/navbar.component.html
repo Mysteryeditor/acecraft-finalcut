@@ -8,7 +8,21 @@
     
 <p-tabMenu  [model]="items" [activeItem]="activeItem" ></p-tabMenu>
 <span class="flex flex-row ml-auto px-5">
-<i class="pi pi-cog px-3 "(mouseleave)="dropdownVisible = true"  (mouseover)="dropdownVisible = false" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
+
+    <!-- for the large screen navmenu -->
+<i class="pi pi-cog px-3 d-sm-none d-lg-inline" (mouseleave)="dropdownVisible = true"  (mouseover)="dropdownVisible = false" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
+
+<!-- for the small screen sidebar -->
+<i class="pi pi-cog px-3 d-lg-none" (click)="sidebarVisible2= true" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
+
+
+<p-sidebar [(visible)]="sidebarVisible2" position="right">
+    <a routerLink="/signin" class="sidebarnav text-black" >Login</a><br>
+    <a class="sidebarnav text-black">Register</a><br>
+    <a class="sidebarnav text-black">Order Status</a><br>
+    <a class="sidebarnav text-black">Contact</a><br>
+</p-sidebar>
+
 <i class="pi pi-shopping-cart  px-3" pBadge value="0" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
 <ul [hidden]="dropdownVisible" (mouseover)="dropdownVisible = false" (mouseleave)="dropdownVisible = true" class="dropdown ">
     <li><a routerLink="signin">Sign-In</a><i class="fa-solid fa-right-to-bracket"></i></li>

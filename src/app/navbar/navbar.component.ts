@@ -42,6 +42,8 @@ export class NavbarComponent implements OnInit{
 
   // for the sidebar    
   dropdownVisible: boolean = true;
+
+  sidebarVisible2: boolean = false;
   
 
 }
