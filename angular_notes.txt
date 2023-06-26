@@ -635,6 +635,45 @@ routerLink="/parent/child"
 /parent is optional
 
 
+--------------------------
+day8:23/6/2023:
+--------------------
+Services:
+Feature:Dependency Injection:
+------------------------------------
+Step 1=class/interface(secure)-properties
 
+step2=services(common-logic-methods)<-interface properties
+
+Note:Class/interface should be in =>Models Folder
+ng g c class
+          Services=>services folder
+
+
+import HttpClientModule in app.module.ts
+
+in the services.ts:
+import httpClient
+
+constructor inject hhtp
+
+url:string='url';
+
+
+getProducts()
+{
+return this.http.get<Products[]>(this.url);
+}
+
+getProuctsbyId(id:number)
+{
+return this.http.get<Products[]>(this.url+'?id='+id)
+}
+<>===>its a generic interface which accepts any type of data.
+
+
+import the interface in service to receive the data.
+
+interface is created in the models folder
 
 

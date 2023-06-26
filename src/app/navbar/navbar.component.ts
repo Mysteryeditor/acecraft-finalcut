@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit{
 
   ngOnInit() {
       this.items = [
-          { label: 'SCHOOL', styleClass:'navmenu'},
+          { label: 'SCHOOL', styleClass:'navmenu',routerLink:'school'},
           { label: 'COLLEGE',routerLink:'college' },
           { label: 'ENTERPRISE',routerLink:'enterprise' },
           { label: 'NOTES', icon: 'fa-circle',styleClass:"notes-icon",routerLink:'blogs' },

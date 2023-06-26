@@ -5,7 +5,7 @@
         </div>
         <div class="container mt-5 list">
            
-                <a class="d-block mt-2 text-decoration-none text-black" routerLink="/{{item.routerLink }}" *ngFor="let item of menuItems">{{item.label |uppercase}}</a>
+                <a (click)="sidebarVisible = false"class="d-block mt-2 text-decoration-none text-black" routerLink="/{{item.routerLink }}" *ngFor="let item of menuItems">{{item.label |uppercase}}</a>
             
         </div>
 

@@ -21,6 +21,8 @@ import { NotesComponent } from './notes/notes.component';
 import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ButtonModule } from 'primeng/button';
+import { SchoolComponent } from './school/school.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,8 @@ import { ButtonModule } from 'primeng/button';
     EnterpriseComponent,
     NotesComponent,
     AirenMaskComponent,
-    SidebarComponent
+    SidebarComponent,
+    SchoolComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { ButtonModule } from 'primeng/button';
     ReactiveFormsModule,
     TimelineModule,
     SidebarModule,
-    ButtonModule
+    ButtonModule,
+    HttpClientModule
     
     // FormControl,
     // FormGroup

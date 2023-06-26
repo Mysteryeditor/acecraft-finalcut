@@ -1,0 +1,82 @@
+a {
+    font-size: 15px;
+}
+
+#layer1-school {
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-1.jpg);
+    background-size: cover;
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+.row .layer1-content {
+    padding-top: 300px;
+    padding-bottom: 200px;
+    color: #978f8f;
+}
+
+/* the second layer */
+.row .layer2text {
+
+    font-size: 40px;
+    color: #978f8f;
+    line-height: 43px;
+
+    padding-top: 300px;
+    padding-bottom: 300px;
+}
+
+/* for the layer3 */
+#layer3 {
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: auto 90vh; */
+    background-size: cover;
+}
+
+#layer3 .layer3content {
+    padding-top: 500px;
+    padding-bottom: 300px;
+}
+
+#layer3 .layer3content2 {
+    padding-bottom: 300px;
+}
+
+#layer3 .layer3content2 p {
+    font-size: 40px;
+    line-height: 40px;
+
+}
+
+/* for the layer 4 */
+#layer4{
+    color: #978f8f;
+    background-color: #0e0c0d;
+}
+
+#layer4 p{
+    font-size: 24px;
+}
+
+#layer4 img{
+    height: auto;
+    width: 95%;
+    
+}
+@media only screen and (min-width : 320px) and (max-width:767px) {
+
+    a {
+        font-size: 11px;
+    }
+
+
+
+
+
+}

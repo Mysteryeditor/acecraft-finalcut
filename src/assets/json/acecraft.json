@@ -1,0 +1,40 @@
+{
+    "schoolsList": [
+        {
+            "id": 1,
+            "name": "JGI",
+            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg"
+        },
+        {
+            "id": 2,
+            "name": "RV",
+            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/rvschool.png"
+        },
+        {
+            "id": 3,
+            "name": "sophias",
+            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/sophias.jpg"
+        },
+        {
+            "id": 4,
+            "name": "kumarans",
+            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/kumarans.png"
+        },
+        {
+            "id": 5,
+            "name": "new horizon gurukul",
+            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Logo-%20New%20Horizon%20Gurukul.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Cisb",
+            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/cgis.png"
+        },
+        {
+            "id": 7,
+            "name": "nhis",
+            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/NHIS%20LOGO%20Jpeg.jpg"
+        }
+
+    ]
+}
