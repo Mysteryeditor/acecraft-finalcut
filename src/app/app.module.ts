@@ -23,6 +23,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ButtonModule } from 'primeng/button';
 import { SchoolComponent } from './school/school.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowseComponent } from './browse/browse.component';
+import { ListComponent } from './browse/list/list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     NotesComponent,
     AirenMaskComponent,
     SidebarComponent,
-    SchoolComponent
+    SchoolComponent,
+    BrowseComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

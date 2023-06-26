@@ -1,0 +1,30 @@
+.bgimg{
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/MJK07401.jpg);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bgimg p{
+    color: #978f8f;
+    font-size:30px ;
+    line-height: 25px;
+}
+
+.browse-page{
+    border-left: 1px solid ivory;
+}
+
+/* .form-select{
+    
+} */
+
+#row1{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(240, 255, 249);
+}
+
+.card{
+    border: none;
+}

@@ -69,6 +69,15 @@ a {
     width: 95%;
     
 }
+
+/* for the fifth layer */
+
+#layer5{
+    background-image: url(https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-41.jpg);
+}
+
+
+/* <=======================Media Queries=======================> */
 @media only screen and (min-width : 320px) and (max-width:767px) {
 
     a {

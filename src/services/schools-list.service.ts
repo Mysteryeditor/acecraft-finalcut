@@ -13,4 +13,10 @@ export class SchoolsListService {
   getschoolsList(){
     return this.http.get<SchoolsList[]>(this.url);
   }
+
+  productsUrl:string='http://localhost:3000/Products';
+
+  getproductsList(){
+    return this.http.get<any>(this.productsUrl);
+  }
 }

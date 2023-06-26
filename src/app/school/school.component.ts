@@ -16,7 +16,7 @@ ngOnInit(): void {
 this.sl.getschoolsList().subscribe((response)=>{
   this.schoolsList= response;
 })
-
-
 }
+
+
 }
