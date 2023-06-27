@@ -12,6 +12,24 @@ export class BrowseComponent implements OnInit {
   totalProducts:number=0;
   constructor(private produlist:SchoolsListService){}
 
+  // sorting the data
+  sortParam: any;
+  sortDirection: any;
+  optionSelected: any;
+  onOptionsSelected(event: any) {
+    console.log(event.target.value); //option value will be sent as event
+    this.optionSelected = event.target.value; //lth
+    if (this.optionSelected === 'lth') {
+      (this.sortParam = 'price'), (this.sortDirection = 'asc');
+    } else if (this.optionSelected === 'htl') {
+      (this.sortParam = 'price'), (this.sortDirection = 'desc');
+    } else if (this.optionSelected === 'nasc') {
+      (this.sortParam = 'title'), (this.sortDirection = 'asc');
+    } else if (this.optionSelected === 'ndesc') {
+      (this.sortParam = 'title'), (this.sortDirection = 'desc');
+    }
+  }
+
   ngOnInit(): void {
 
   //  this.produlist.countSubject.subscribe((response)=>{

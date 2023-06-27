@@ -27,6 +27,10 @@ import { BrowseComponent } from './browse/browse.component';
 import { ListComponent } from './browse/list/list.component';
 import { SettingsSidebarComponent } from './settings-sidebar/settings-sidebar.component';
 import { ProductComponent } from './product/product.component';
+import { CartComponent } from './cart/cart.component';
+import { SortPipePipe } from '../shared/sort-pipe.pipe';
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +48,9 @@ import { ProductComponent } from './product/product.component';
     BrowseComponent,
     ListComponent,
     SettingsSidebarComponent,
-    ProductComponent
+    ProductComponent,
+    CartComponent,
+    SortPipePipe
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,8 @@ import { ProductComponent } from './product/product.component';
     TimelineModule,
     SidebarModule,
     ButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
     
     // FormControl,
     // FormGroup

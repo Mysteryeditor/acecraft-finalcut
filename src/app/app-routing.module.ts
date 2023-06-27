@@ -10,6 +10,7 @@ import { EnterpriseComponent } from './enterprise/enterprise.component';
 import { NotesComponent } from './notes/notes.component';
 import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 import { ProductComponent } from './product/product.component';
+import { CartComponent } from './cart/cart.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'college', component: CollegeComponent },
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path:'product/:id',component:ProductComponent
+  },
+  {
+    path:'cart',component:CartComponent
   }
 ];
 
