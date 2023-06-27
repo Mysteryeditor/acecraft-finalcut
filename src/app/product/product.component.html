@@ -1,1 +1,64 @@
-<p>product works!</p>
+<div class="container-fluid">
+
+    <div id="layer1" class="container mt-5 pt-5" *ngFor="let d1 of data">
+        <div class="row d-flex">
+            <div class="col-lg-6 col-md-6">
+                <img class="img-fluid" src="{{d1.imgSrc}}" alt="">
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <h2>{{d1.title}}</h2>
+
+                <!-- sublayer1 -->
+                <div id="sublayer1" class="mb-5">
+                    <div id="content1" class="mt-5 mb-5">
+                        <p><span>Product Code:</span>&nbsp;{{d1.productCode}}</p>
+                        <p><span>Brand:</span>&nbsp;{{d1.brand}}</p>
+                        <p><span>Sold By:</span>&nbsp;{{d1.soldBy}}</p>
+                    </div>
+
+                    <div id="price" class="mt-5 mb-5">
+                        <label>{{d1.price |currency : "INR" : "symbol" : "3.0"}}</label>
+                        <span>{{d1.originalPrice|currency : "INR" : "symbol" : "3.0"}}</span>
+
+                    </div>
+
+                    <button id="discount">{{d1.offerPercent}}% OFF</button>
+                    <div class="bg-black text-white " ></div>
+                </div>
+                <!-- end of sublayer1 -->
+
+                <button id="sizeguide" class="text-white mb-5">SIZE GUIDE</button>
+
+                <form>
+                <div class="d-flex col-md-10 col-lg-4" id="size">
+                    <label class="text-white col-4">Size:</label>
+                    <select  class="form-select" aria-label=".form-select-sm example">
+                        <option selected value="{{s}}" *ngFor="let s of d1.size">{{s}}</option>
+                    </select>
+
+                    
+                </div>
+                <p id="n_items">items left in Stock</p>
+                <div class="form-group" id="quantity">
+                    <label class="text-white col-4">Quantity</label>
+                    <input type="number">
+
+                </div>
+
+
+                <button class="mx-5">Add to Cart</button>
+
+                <button>Buy Now</button>
+            </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Description of Product</label>
+            <p><b>No Returns & No ExChange</b></p>
+            <p>{{d1.description}}</p>
+        </div>
+
+    </div>
+</div>

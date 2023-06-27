@@ -9,7 +9,8 @@ import { SchoolsListService } from 'src/services/schools-list.service';
 export class ProductComponent implements OnInit {
 
   Pid!:number
-  data!:any
+  data!:any;
+  
   constructor(private sls:SchoolsListService,private router:Router,private actroute:ActivatedRoute){}
 
   ngOnInit(): void {

@@ -9,13 +9,29 @@ import { SchoolsListService } from 'src/services/schools-list.service';
 export class BrowseComponent implements OnInit {
   sortToggle:boolean=true;
   pList:any[]=[]
-
+  totalProducts:number=0;
   constructor(private produlist:SchoolsListService){}
 
   ngOnInit(): void {
+
+  //  this.produlist.countSubject.subscribe((response)=>{
+  //    this.totalProducts=response;
+  //    console.log(response)
+  //  })
+
+   this.produlist.getproductsList().subscribe((response)=>{
+    this.totalProducts=response.length;
+    console.log(response)
+  })
+
     this.produlist.getproductsList().subscribe((response)=>{
       this.pList=response;
-    })
-      console.log(this.pList)
+      // for (const x of this.pList) {
+      //   this.totalProducts++;
+
+      // }
+      // console.log(this.totalProducts)
+    } )
+    
   }
 }

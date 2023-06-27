@@ -1,0 +1,80 @@
+/* for the whole container */
+
+#sublayer1 {
+    line-height: 10px;
+    border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+#sublayer1 p {
+    font-size: 15px;
+    
+}
+
+#sublayer1 span {
+    font-size: 14px;
+    font-weight: 620;
+}
+
+/* for the price section */
+#price label {
+    /* margin-top: 0px; */
+    font-size: 45px;
+}
+
+#price span {
+    margin-top: 20px;
+    margin-left: 6px;
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+/* discount button */
+#discount{
+    height: 30px;
+    /* width: 90px; */
+    border: none;
+    background-color: black;
+margin-left:20px;
+font-size:16px !important;
+margin-bottom: 20px !important;
+}
+
+/* for the size guide button */
+#sizeguide{
+    height: 25px !important;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+}
+
+/* for the labels of size */
+#n_items{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(242, 242, 242);
+
+}
+#size label,#quantity label{
+    background-color: black;
+    border-radius: 5px 0px 0px 5px;
+    font-weight: 500;
+
+}
+
+#size select{
+    width: 60%;
+}
+
+/* for the quantity input */
+#quantity{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+#quantity input{
+    margin-left: 10px;
+    background-color: white;
+    border: 1px solid rgb(170, 170, 169);
+
+}
+b {
+    text-transform: uppercase;
+}
