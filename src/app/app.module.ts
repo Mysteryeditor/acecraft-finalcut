@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowseComponent } from './browse/browse.component';
 import { ListComponent } from './browse/list/list.component';
 import { SettingsSidebarComponent } from './settings-sidebar/settings-sidebar.component';
+import { ProductComponent } from './product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { SettingsSidebarComponent } from './settings-sidebar/settings-sidebar.co
     SchoolComponent,
     BrowseComponent,
     ListComponent,
-    SettingsSidebarComponent
+    SettingsSidebarComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

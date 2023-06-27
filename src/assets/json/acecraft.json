@@ -3,7 +3,8 @@
         {
             "id": 1,
             "name": "JGI",
-            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg"
+            "image": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/jain.jpeg",
+            "router":""
         },
         {
             "id": 2,

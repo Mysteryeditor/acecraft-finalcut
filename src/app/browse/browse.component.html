@@ -45,9 +45,9 @@
     <div class="d-flex row">
         <div class="card col-4 mb-3" *ngFor="let item of pList">
 
-            <img class="card-img" src="{{item.imgSrc}}" alt="">
-            <h6 class="card-title text-center">{{item.title}}</h6>
+            <!-- <img class="card-img h-75" src="{{item.imgSrc}}" alt="">
+            <h6 class="card-title text-center">{{item.title}}</h6> -->
 
-
+<app-list [products]="item"></app-list>
         </div>
     </div>

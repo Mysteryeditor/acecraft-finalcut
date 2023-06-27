@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <div class="grid text-center bg-white justify-content-center">
         <div class="col-2 md:col-2 lg:col-1 mt-lg-4" *ngFor="let school of schoolsList">
-            <a routerLink="/browse" class="text-center text-black">
-                <img height="45" src="{{school.image}}" alt="logo" class=""><br>
+            <a routerLink="/browse/{{school.router}}" class="text-center text-black">
+                <img height="45" src="{{school.image}}" alt="logo"><br>
                 <label>{{school.name|uppercase}}</label>
             </a>
 

@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { EnterpriseComponent } from './enterprise/enterprise.component';
 import { NotesComponent } from './notes/notes.component';
 import { AirenMaskComponent } from './airen-mask/airen-mask.component';
+import { ProductComponent } from './product/product.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'college', component: CollegeComponent },
@@ -21,6 +22,9 @@ const routes: Routes = [
   {
     path:'browse',
     component:BrowseComponent
+  },
+  {
+    path:'product/:id',component:ProductComponent
   }
 ];
 
