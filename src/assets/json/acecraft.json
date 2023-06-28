@@ -357,6 +357,18 @@
       "discount": 40,
       "totalAmount": 0,
       "subtotal": 0
+    },
+    {
+      "id": 8,
+      "name": "NHG Trousers [Boys, Grade 5-10]",
+      "quantity": 1,
+      "price": 605,
+      "imgUrl": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f01491c2e5ab32f33832/images/5aa0f01491c2e5ab32f33833/5aa0f01e91c2e5ab32f338a1/webp/5aa0f01e91c2e5ab32f338a1-640x640.jpg",
+      "size": 20,
+      "originalPrice": 910,
+      "discount": 34,
+      "totalAmount": 0,
+      "subtotal": 0
     }
   ]
 }

@@ -30,11 +30,13 @@ display:any=[]
 isHidden:boolean=true
 none='block'
 ngOnInit(): void {
+
+  //for the retrieval of the data
     this.cartRetrival.getFromCart().subscribe(
       (response)=>{
         this.display=response;
        if(this.display==0){
-        this.isHidden=false
+        this.isHidden=false//for hiding the default message
         this.none="none"
         console.log(this.isHidden);
        }
@@ -52,5 +54,28 @@ delete(deleteItem:cartDesc){
 
 }
 
+// for the quantity increment
+incrementQuantity(item:cartDesc){
+  item.quantity++;
+  this.cartRetrival.updateCartItem(item);
+}
 
+// for the quantity decrement
+decrementQuantity(item:cartDesc){
+  if(item.quantity==1){
+    this.delete(item);
+  }
+  item.quantity--;
+  this.cartRetrival.updateCartItem(item);
+}
+
+cartDetails:any=[]
+// for the total price
+priceTotal(display:any){
+  const iniValue=0;
+  this.cartDetails=display;
+  const a=this.cartDetails.reduce((sum:any,item:any)=>sum+(item.price * item.quantity),iniValue);
+  return a;
+
+}
 }

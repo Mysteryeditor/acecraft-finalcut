@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { cartDesc } from 'src/models/schools-list';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -29,5 +30,16 @@ export class CartserviceService {
    //remove from cart
    removeFromCart(item:any){
     return this.http.delete(this.url+item.id)
+   }
+
+   //incrementing the quantity
+   updateCartItem(item:cartDesc){
+    
+    const Updateurl=this.cartUrl+'/'+item.id;
+    console.log(Updateurl);
+    return this.http.put(Updateurl,item).subscribe((data)=>{
+      alert('updated');
+    });
+    
    }
 }

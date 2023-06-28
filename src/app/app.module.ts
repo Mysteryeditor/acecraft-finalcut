@@ -25,7 +25,6 @@ import { SchoolComponent } from './school/school.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowseComponent } from './browse/browse.component';
 import { ListComponent } from './browse/list/list.component';
-import { SettingsSidebarComponent } from './settings-sidebar/settings-sidebar.component';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
 import { SortPipePipe } from '../shared/sort-pipe.pipe';
@@ -47,7 +46,6 @@ import { CommonModule } from '@angular/common';
     SchoolComponent,
     BrowseComponent,
     ListComponent,
-    SettingsSidebarComponent,
     ProductComponent,
     CartComponent,
     SortPipePipe,

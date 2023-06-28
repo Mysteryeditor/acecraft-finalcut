@@ -1,7 +1,7 @@
 <div class="container-fluid" >
     <div class="row text-center" id="bagtotal">
             
-        <h1 [hidden]="!isHidden" >Your Bag Total is </h1>
+        <h1 [hidden]="!isHidden" >Your Bag Total is {{priceTotal(display)|currency : "INR" : "symbol" : "3.0"}}</h1>
 
     </div>
     
@@ -21,13 +21,13 @@
 
             <div class="col-lg-2" id="quantity">
                 
-                <button>-</button>
-                <input class="text-black" type="text" value="{{a.quantity}}">
-                <Button>+</Button>
+                <button (click)="decrementQuantity(a)">-</button>
+                <input class="text-black" name="quantity" type="text" value="{{a.quantity}}">
+                <Button (click)="incrementQuantity(a)">+</Button>
             </div>
 
             <div class="col-lg-4 text-center">
-                <h3>{{a.price |currency}}</h3>
+                <h3>{{a.price |currency : "INR" : "symbol" : "3.0"}}</h3>
 
                 <a (click)="delete(a)"style="color: red;">Remove</a>
             </div>
