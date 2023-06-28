@@ -1,4 +1,5 @@
-<div class="card col-lg-4 offset-lg-4 flex justify-content-center">
+<div class="container my-5 shadow-sm">
+<div class="card col-lg-4 col-md-12 shadow-sm offset-lg-4 flex justify-content-center p">
     <p-card id="login-card" header="Login with ACECRAFT">
         <form #signin="ngForm" (ngSubmit)="signin.form.valid && onSubmit()" novalidate>
             <div class="form-group mb-3">
@@ -27,5 +28,11 @@
             <button type="submit" class="bg-dark col-lg-12 col-sm-12">Login</button>
         </form>
 
+
+        <div class="text-center mt-5">
+           <small> <a class="text-secondary text-decoration-none">Forgot Password?</a>
+           </small>
+        </div>
     </p-card>
+</div>
 </div>

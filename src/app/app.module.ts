@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,Title } from '@angular/platform-browser';
 import { SidebarModule } from 'primeng/sidebar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,7 +50,7 @@ import { CommonModule } from '@angular/common';
     SettingsSidebarComponent,
     ProductComponent,
     CartComponent,
-    SortPipePipe
+    SortPipePipe,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +72,7 @@ import { CommonModule } from '@angular/common';
     // FormGroup
     // Validators
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

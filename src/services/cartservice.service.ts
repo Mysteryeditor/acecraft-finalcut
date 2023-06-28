@@ -10,12 +10,24 @@ export class CartserviceService {
   cartUrl='http://localhost:3000/cart'
 
   constructor(private http:HttpClient) {
-    this.url=this.cartUrl;  
+    this.url=this.cartUrl+'/';  
    }
 
+  //  added from the product component
    addToCart(product:cartDesc){
-    this.http.post<cartDesc>(this.cartUrl,product).subscribe((data)=>{
+    this.http.post<cartDesc[]>(this.cartUrl,product).subscribe((data)=>{
       console.log("added to the cart"+data);
     })
+   }
+
+
+  //  retrieving the cart data
+   getFromCart(){
+    return this.http.get<cartDesc[]>(this.cartUrl);
+   }
+
+   //remove from cart
+   removeFromCart(item:any){
+    return this.http.delete(this.url+item.id)
    }
 }

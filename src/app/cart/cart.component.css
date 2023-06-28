@@ -1,0 +1,39 @@
+#itemRow{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+   
+}
+
+input{
+    background-color: white;
+    border: 2px solid rgb(70, 70, 68);
+    width: 40px;
+    text-align: center;
+}
+
+a:hover{
+    cursor: grab;
+}
+
+#continueshopping{
+    border: 2px solid black;
+    height: 50px;
+    color: black;
+    
+    /* font-size: 20px; */
+   background-color: transparent;
+
+}
+
+
+#continueshopping:hover{
+    color: white;
+    background-color: black; 
+}
+
+/* for the increment and decrement buttons */
+#quantity button{
+border: none;
+background: none;
+color: black;
+}

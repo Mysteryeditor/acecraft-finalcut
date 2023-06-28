@@ -44,12 +44,7 @@ export class BrowseComponent implements OnInit {
 
     this.produlist.getproductsList().subscribe((response)=>{
       this.pList=response;
-      // for (const x of this.pList) {
-      //   this.totalProducts++;
-
-      // }
-      // console.log(this.totalProducts)
-    } )
+     } )
     
   }
 }

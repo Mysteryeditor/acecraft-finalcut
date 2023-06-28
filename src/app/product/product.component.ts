@@ -17,27 +17,29 @@ export class ProductComponent implements OnInit {
  cart:cartDesc={
   id:0,
   name:'',
-  quantity:0,
+  quantity:1,
   price:0,
   imgUrl:'',
-  size:'',
+  size:20,
   originalPrice:0,
   discount:0,
   totalAmount:0,
   subtotal:0
  }
 
- quantity:number=1
+//  quantity:number=1
+//  size:any=''
 
  addToCart(i:any){
-  this.cart.name=i.name;
+  this.cart.name=i.title;
   this.cart.price=i.price;
-  this.cart.quantity=this.quantity;
+  this.cart.quantity=this.cart.quantity;
   this.cart.originalPrice=i.originalPrice;
   this.cart.imgUrl=i.imgSrc;
-  this.cart.size=i.size;
+  this.cart.size=this.cart.size;
   this.cart.totalAmount=0;
   this.cart.id=i.id;
+  this.cart.discount=i.offerPercent;
   this.carts.addToCart(this.cart);
   console.log(i.id);
 
@@ -48,6 +50,8 @@ export class ProductComponent implements OnInit {
   constructor(private sls:SchoolsListService,private carts:CartserviceService,private router:Router,private actroute:ActivatedRoute){}
 
   ngOnInit(): void {
+
+    // for displaying the corresponding product 
       this.Pid=this.actroute.snapshot.params['id'];
 
       this.sls.getSingleProduct(this.Pid).subscribe((response)=>{

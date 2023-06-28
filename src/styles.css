@@ -27,15 +27,20 @@
       color:rgb(182, 105, 241) ;
     }
 
-    /* for the login page */
+    /* for the login & signup page */
     .p-card .p-card-body {
       background-color: rgb(255, 255, 255) !important;
       border: 1px solid rgb(228, 228, 228);
-
+      height: 100%;
+      padding-top: 20px !important;
     }
+
+    /* the login & signup card title */
 
     .p-card .p-card-title{
       color: gray;
+      text-align: center;
+      font-weight: 200 !important;
     }
 
     /* the sidebar in the sm screen */

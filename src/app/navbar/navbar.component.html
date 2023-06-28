@@ -1,43 +1,35 @@
 <div class="container-fluid sticky-top">
-<div class="row " style="background-color:black;" >
-    <!-- <div class="col-1 mt-2 ml-1 d-lg-none">
-        <app-sidebar></app-sidebar>
-    </div> -->
-<div id="navbar" class="card col justify-content-center flex flex-wrap align-items-center container-fluid sticky-top">
-    <a class="mt-3" id="acecraft" href="#">acecraft</a>
-    
-<p-tabMenu  [model]="items" [activeItem]="activeItem" ></p-tabMenu>
-<span class="flex flex-row ml-auto px-5">
+    <div class="row " style="background-color:black;">
+        <div class="col-1 mt-2 ml-1 d-lg-none">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div id="navbar"
+            class="card col justify-content-center flex flex-wrap align-items-center container-fluid sticky-top">
+            <a class="mt-3" id="acecraft" href="#">acecraft</a>
 
-    <!-- for the large screen navmenu -->
-<i class="pi pi-cog px-3 d-sm-none d-lg-inline" (mouseleave)="dropdownVisible = true"  (mouseover)="dropdownVisible = false" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
+            <p-tabMenu [model]="items" [activeItem]="activeItem"></p-tabMenu>
+            <span class="flex flex-row ml-auto px-5">
 
-<!-- for the small screen sidebar -->
-<!-- <i class="pi pi-cog px-3 d-lg-none" (click)="sidebarVisible2= true" style="color: white;margin-top: -35px;font-size: 1.5em;"></i> -->
+                <!-- for the large screen navmenu -->
+                <i class="pi pi-cog px-3 d-sm-none d-lg-inline" (mouseleave)="dropdownVisible = true"
+                    (mouseover)="dropdownVisible = false" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
 
+                <!-- for the small screen sidebar -->
+                <i class="pi pi-cog px-3 d-lg-none" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
+                <ul [hidden]="dropdownVisible" (mouseover)="dropdownVisible = false"
+                    (mouseleave)="dropdownVisible = true" class="dropdown ">
+                    <li><a routerLink="signin">Sign-In</a><i class="fa-solid fa-right-to-bracket"></i></li>
+                    <li><a routerLink="register">Register</a><i class="fa-solid fa-user-plus"></i></li>
+                    <li><a>Order Status</a><i class="fa-solid fa-box-archive"></i></li>
+                    <li><a href="">Contact</a><i class="fa-solid fa-comments"></i></li>
+                </ul>
 
-<p-sidebar [(visible)]="sidebarVisible2" position="right">
-    <a routerLink="/signin" class="sidebarnav text-black" >Login</a><br>
-    <a class="sidebarnav text-black">Register</a><br>
-    <a class="sidebarnav text-black">Order Status</a><br>
-    <a class="sidebarnav text-black">Contact</a><br>
-</p-sidebar>
+                <!-- the shopping cart -->
+                <i class="pi pi-shopping-cart  px-3" routerLink="cart" pBadge value="{{cartcount}}"
+                    style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
 
-<i class="pi pi-shopping-cart  px-3" routerLink="cart" pBadge value="0" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
-<ul [hidden]="dropdownVisible" (mouseover)="dropdownVisible = false" (mouseleave)="dropdownVisible = true" class="dropdown ">
-    <li><a routerLink="signin">Sign-In</a><i class="fa-solid fa-right-to-bracket"></i></li>
-    <li><a routerLink="register">Register</a><i class="fa-solid fa-user-plus"></i></li>
-    <li><a >Order Status</a><i class="fa-solid fa-box-archive"></i></li>
-    <li><a href="">Contact</a><i class="fa-solid fa-comments"></i></li>
-    </ul>
-</span>
-</div>
-</div>
+            </span>
+        </div>
+    </div>
 
 </div>
-
-
-
-
-
-   

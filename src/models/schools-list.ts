@@ -15,6 +15,7 @@ export interface Products {
     offerPercent: number;
     gender: string;
     size: number[];
+    sizeGuide:'';
     description: string[];
     imgSrc: string;
   }

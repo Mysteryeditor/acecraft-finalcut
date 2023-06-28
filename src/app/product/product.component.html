@@ -1,6 +1,7 @@
 <div class="container-fluid">
 
     <div id="layer1" class="container mt-5 pt-5" *ngFor="let d1 of data">
+        <div class="container">
         <div class="row d-flex">
             <div class="col-lg-6 col-md-6">
                 <img class="img-fluid" src="{{d1.imgSrc}}" alt="">
@@ -28,12 +29,29 @@
                 </div>
                 <!-- end of sublayer1 -->
 
-                <button id="sizeguide" class="text-white mb-5">SIZE GUIDE</button>
+                <button id="sizeguide" data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-white mb-5">SIZE GUIDE</button>
+                <!-- Modal for size guide -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title mx-auto" id="exampleModalLabel">Size Guide</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="{{d1.sizeGuide}}" class="img-fluid" alt="">
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+
 
                 <form>
                 <div class="d-flex col-md-10 col-lg-4" id="size">
                     <label class="text-white col-4">Size:</label>
-                    <select  class="form-select" aria-label=".form-select-sm example">
+                    <select name="size" [(ngModel)]="cart.size"  class="form-select" aria-label=".form-select-sm example">
                         <option selected value="{{s}}" *ngFor="let s of d1.size">{{s}}</option>
                     </select>
 
@@ -42,23 +60,25 @@
                 <p id="n_items">items left in Stock</p>
                 <div class="form-group" id="quantity">
                     <label class="text-white col-4">Quantity</label>
-                    <input type="number">
+                    <input name="quantity" [(ngModel)]="cart.quantity" type="number" min="1" max="50" class="text-dark">
 
                 </div>
 
 
-                <button class="mx-5" (click)="addToCart(d1)">Add to Cart</button>
+                <button class="mx-5 col-lg-3" (click)="addToCart(d1)">Add to Cart</button>
 
-                <button>Buy Now</button>
+                <button class="col-lg-3" (click)="addToCart(d1)" routerLink="/cart">Buy Now</button>
             </form>
             </div>
         </div>
 
-        <div class="row">
-            <label>Description of Product</label>
-            <p><b>No Returns & No ExChange</b></p>
-            <p>{{d1.description}}</p>
+        <div class="row mt-5">
+            <label id="desc"><h4>Description of Product</h4></label>
+            <p class="mt-2 mb-1 fs-5"><b>No Returns & No ExChange</b></p>
+            <p style="font-size: 15px;">{{d1.description}}</p>
         </div>
-
+    </div>
     </div>
 </div>
+
+

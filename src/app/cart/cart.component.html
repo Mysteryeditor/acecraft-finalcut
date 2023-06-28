@@ -1,1 +1,52 @@
+<div class="container-fluid" >
+    <div class="row text-center" id="bagtotal">
+            
+        <h1 [hidden]="!isHidden" >Your Bag Total is </h1>
 
+    </div>
+    
+    <div class="container"   *ngFor="let a of display">
+     
+
+        <div class="row" id="itemRow">
+
+            <div class="col-lg-3">
+                <img class="img-fluid" src="{{a.imgUrl}}" alt="">
+            </div>
+
+            <div class="col-lg-3">
+                <h3>{{a.name}}</h3>
+                <h6>Size:{{a.size}}</h6>
+            </div>
+
+            <div class="col-lg-2" id="quantity">
+                
+                <button>-</button>
+                <input class="text-black" type="text" value="{{a.quantity}}">
+                <Button>+</Button>
+            </div>
+
+            <div class="col-lg-4 text-center">
+                <h3>{{a.price |currency}}</h3>
+
+                <a (click)="delete(a)"style="color: red;">Remove</a>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <div [style.min-height]="isHidden? '0':'75vh'"  [style.display]="isHidden? 'none':'block'" class="container d-flex justify-content-center align-items-center" >
+
+        <div class="row mt-5 ">
+            <h4 [style.display]="isHidden? 'none':'block'" class="text-center">Your Shopping cart is empty!</h4>
+
+            <button [style.display]="isHidden? 'none':'block'"  class="col-lg-5 col-md-5 col-sm-5 mx-auto" id="continueshopping" routerLink=""><h5>Continue Shopping</h5></button>
+        </div>
+    </div>
+
+
+</div>

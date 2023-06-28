@@ -1,5 +1,5 @@
-
- @media only screen and (min-width : 992px) {
+/* for the border around the container */
+@media only screen and (min-width : 992px) {
     #logincard-parent{
         border: 1px solid rgb(228, 228, 228);
         
