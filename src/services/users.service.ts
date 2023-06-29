@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { usersData } from 'src/models/users';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,15 @@ export class UsersService {
   }
 
   // for user authentication
-  authUser(){
-    
+  userUrl:string=''
+  authUser(email:string){
+    this.userUrl=this.url+'?email_like='+email
+    return this.http.get<usersData>(this.userUrl)
   }
+
+  gettingUserData(){
+    return this.http.get<usersData>(this.url);
+  }
+
+ 
 }

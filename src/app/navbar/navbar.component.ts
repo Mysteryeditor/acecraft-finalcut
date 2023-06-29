@@ -2,8 +2,9 @@ import { Component ,OnInit} from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Router, NavigationEnd } from '@angular/router';
 import { CartserviceService } from 'src/services/cartservice.service';
+import { UsersService } from 'src/services/users.service';
 import { cartDesc } from 'src/models/schools-list';
-
+import { usersData } from 'src/models/users';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,7 +12,7 @@ import { cartDesc } from 'src/models/schools-list';
 })
 export class NavbarComponent implements OnInit{
 
-  constructor(private router: Router,private cartCount:CartserviceService){}
+  constructor(private router: Router,private cartCount:CartserviceService,private userlog:UsersService){}
  
   items!: MenuItem[];
 
@@ -19,7 +20,18 @@ export class NavbarComponent implements OnInit{
 
   activeItem!: MenuItem;
 
+
+    
+  
+
+  userLoggedIn:boolean=false
+  
+
+  
+
+
   ngOnInit() {
+
       this.items = [
           { label: 'SCHOOL', styleClass:'navmenu',routerLink:'/school'},
           { label: 'COLLEGE',routerLink:'college' },
@@ -33,6 +45,22 @@ export class NavbarComponent implements OnInit{
       this.cartCount.getFromCart().subscribe((response)=>{
         this.cartcount=response.length;
       })
+
+      this.userlog.gettingUserData().subscribe((response)=>{
+        
+        console.log(response)
+        
+        if(response.isLogged){
+          this.userLoggedIn=response.isLogged
+        }
+
+        else{
+          console.log(response.isLogged);
+        }
+      })
+
+
+      
 
       // this.router.events.subscribe((event) => {
       //   if (event instanceof NavigationEnd) {
@@ -50,6 +78,8 @@ export class NavbarComponent implements OnInit{
 
   // for the sidebar    
   dropdownVisible: boolean = true;
+
+
 
 
   
