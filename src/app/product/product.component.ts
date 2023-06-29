@@ -4,6 +4,7 @@ import { SchoolsListService } from 'src/services/schools-list.service';
 import { CartserviceService } from 'src/services/cartservice.service';
 // for the cart description
 import { cartDesc } from 'src/models/schools-list';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -20,7 +21,7 @@ export class ProductComponent implements OnInit {
   quantity:1,
   price:0,
   imgUrl:'',
-  size:20,
+  size:28,
   originalPrice:0,
   discount:0,
   totalAmount:0,
@@ -42,6 +43,19 @@ export class ProductComponent implements OnInit {
   this.cart.discount=i.offerPercent;
   this.carts.addToCart(this.cart);
   console.log(i.id);
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top',
+    showConfirmButton: false,
+    timer: 3000,
+   
+  })
+
+  Toast.fire({
+    icon: 'success',
+    title: 'Item added successfully'
+  })
 
   
 

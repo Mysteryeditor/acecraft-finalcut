@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { CartserviceService } from 'src/services/cartservice.service';
 import { cartDesc } from 'src/models/schools-list';
 import { Title } from '@angular/platform-browser';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -12,18 +13,6 @@ export class CartComponent implements OnInit {
   constructor(private cartRetrival:CartserviceService,private title:Title){
     this.title.setTitle('Cart Summary');
   }
- carts:cartDesc={
-   id:0,
-   name:'',
-   imgUrl:'',
-   quantity:0,
-   price:0,
-   size:'',
-   originalPrice:0,
-   discount:0,
-   totalAmount:0,
-   subtotal:0
- }
 
 display:any=[]
 
@@ -58,6 +47,7 @@ delete(deleteItem:cartDesc){
 incrementQuantity(item:cartDesc){
   item.quantity++;
   this.cartRetrival.updateCartItem(item);
+
 }
 
 // for the quantity decrement
@@ -69,13 +59,13 @@ decrementQuantity(item:cartDesc){
   this.cartRetrival.updateCartItem(item);
 }
 
-cartDetails:any=[]
+cartDetails:any=[];
+
 // for the total price
 priceTotal(display:any){
   const iniValue=0;
   this.cartDetails=display;
   const a=this.cartDetails.reduce((sum:any,item:any)=>sum+(item.price * item.quantity),iniValue);
   return a;
-
 }
 }

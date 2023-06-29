@@ -1,6 +1,14 @@
-export interface Users {
+export interface usersData {
     firstName:string;
     lastName: string;
     email:string;
-    password:string
+    password:string;
+    type:string;
+    dealername:string;
+    dealernumber:string;
+    city:string;
+    state:string;
+    gstnumber:string;
+    isLogged:false
+    cart:any[];
 }

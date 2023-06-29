@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { cartDesc } from 'src/models/schools-list';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import Swal from 'sweetalert2';
 @Injectable({
   providedIn: 'root'
 })
@@ -32,13 +33,24 @@ export class CartserviceService {
     return this.http.delete(this.url+item.id)
    }
 
-   //incrementing the quantity
+   //incrementing or decrementing the quantity
    updateCartItem(item:cartDesc){
     
     const Updateurl=this.cartUrl+'/'+item.id;
     console.log(Updateurl);
-    return this.http.put(Updateurl,item).subscribe((data)=>{
-      alert('updated');
+    return this.http.put(Updateurl,item).subscribe(()=>{
+      const Toast=Swal.mixin({
+        toast:true,
+        position:'top',
+        showConfirmButton: false,
+        timer:3000
+      })
+    
+      Toast.fire({
+        icon:'success',
+        title:"Quantity Updated"
+      })
+      
     });
     
    }

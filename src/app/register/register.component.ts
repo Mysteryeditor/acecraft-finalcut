@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Form, FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms'
 import Swal from 'sweetalert2';
+import { usersData } from 'src/models/users';
+import { UsersService } from 'src/services/users.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -58,17 +60,9 @@ export class RegisterComponent implements OnInit {
     "Uttarakhand",
     "West Bengal"
   ];
-
-
-
-
-
-
-
-
   gstnumber!: FormControl;
 
-
+constructor(private user:UsersService){}
 
   ngOnInit(): void {
     this.firstname = new FormControl('', [Validators.required,
@@ -110,13 +104,45 @@ export class RegisterComponent implements OnInit {
   }
 
 
+  userInfo:usersData=
+    {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      type: '',
+      dealername: '',
+      dealernumber: '',
+      city: '',
+      state: '',
+      gstnumber: '',
+      cart: [],
+      isLogged: false
+    }
+  
+
   onSubmit() {
+    this.userInfo.firstName=this.firstname.value;
+    this.userInfo.lastName=this.lastname.value;
+    this.userInfo.email = this.email.value;
+    this.userInfo.type=this.schenter.value;
+    this.userInfo.password=this.password.value;
+    this.userInfo.dealername=this.dealername.value;
+    this.userInfo.dealernumber=this.dealernumber.value;
+    this.userInfo.state=this.statename.value;
+    this.userInfo.city=this.city.value;
+    this.userInfo.gstnumber=this.gstnumber.value;
+    this.user.postUser(this.userInfo)
+    
+
+
+
     Swal.fire({
       icon:'success',
       title:'Registered SuccessFully',
       showConfirmButton:false,
       timer:2000
     });
-    console.log("helo");
+
   }
 }
