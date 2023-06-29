@@ -1,4 +1,4 @@
-import { Component ,OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Router, NavigationEnd } from '@angular/router';
 import { CartserviceService } from 'src/services/cartservice.service';
@@ -10,68 +10,58 @@ import { usersData } from 'src/models/users';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router,private cartCount:CartserviceService,private userlog:UsersService){}
- 
+  constructor(private router: Router, private cartCount: CartserviceService, private userlog: UsersService) { }
+
   items!: MenuItem[];
 
-  cartcount!:number
+  cartcount!: number
 
   activeItem!: MenuItem;
 
+  userList: any = []
 
-    
-  
 
-  userLoggedIn:boolean=false
-  
 
-  
+  userLoggedIn!: boolean
+  userEmail!:string
+
+
+
 
 
   ngOnInit() {
 
-      this.items = [
-          { label: 'SCHOOL', styleClass:'navmenu',routerLink:'/school'},
-          { label: 'COLLEGE',routerLink:'college' },
-          { label: 'ENTERPRISE',routerLink:'enterprise' },
-          { label: 'NOTES', icon: 'fa-circle',styleClass:"notes-icon",routerLink:'blogs' },
-          { label: 'AIREN MASK', icon: 'pi pi-fw pi-cog',routerLink:'am' }
-      ];
+    this.items = [
+      { label: 'SCHOOL', styleClass: 'navmenu', routerLink: '/school' },
+      { label: 'COLLEGE', routerLink: 'college' },
+      { label: 'ENTERPRISE', routerLink: 'enterprise' },
+      { label: 'NOTES', icon: 'fa-circle', styleClass: "notes-icon", routerLink: 'blogs' },
+      { label: 'AIREN MASK', icon: 'pi pi-fw pi-cog', routerLink: 'am' }
+    ];
 
-      this.activeItem = this.items[0];
+    this.activeItem = this.items[0];
 
-      this.cartCount.getFromCart().subscribe((response)=>{
-        this.cartcount=response.length;
-      })
-
-      this.userlog.gettingUserData().subscribe((response)=>{
-        
-        console.log(response)
-        
-        if(response.isLogged){
-          this.userLoggedIn=response.isLogged
-        }
-
-        else{
-          console.log(response.isLogged);
-        }
-      })
+    this.cartCount.getFromCart().subscribe((response) => {
+      this.cartcount = response.length;
+    })
 
 
-      
 
-      // this.router.events.subscribe((event) => {
-      //   if (event instanceof NavigationEnd) {
-      //     const url = event.urlAfterRedirects;
-      //     const activeItem = this.items.find(item => item.routerLink === url);
-      //     if (activeItem) {
-      //       this.activeItem = activeItem;
-      //       localStorage.setItem('activeItemIndex', this.items.indexOf(activeItem).toString());
-      //     }
-      //   }
-      // });
+
+
+
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     const url = event.urlAfterRedirects;
+    //     const activeItem = this.items.find(item => item.routerLink === url);
+    //     if (activeItem) {
+    //       this.activeItem = activeItem;
+    //       localStorage.setItem('activeItemIndex', this.items.indexOf(activeItem).toString());
+    //     }
+    //   }
+    // });
   }
 
 
@@ -82,6 +72,6 @@ export class NavbarComponent implements OnInit{
 
 
 
-  
+
 
 }
