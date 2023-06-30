@@ -1,0 +1,31 @@
+<p-sidebar p-sidebar-sm [(visible)]="sidebarVisible">
+    <div class="container-fluid">
+        <h5 class="text-secondary">Shop For</h5>
+
+    </div>
+    <div class="container mt-5 list">
+       
+            <a (click)="sidebarVisible = false"class="d-block mt-2 text-decoration-none text-black" routerLink="{{item.routerLink }}" *ngFor="let item of menuItems">{{item.label |uppercase}}</a>
+        
+    </div>
+
+    <div class="container d-flex justify-content-center align-tems-center">
+        <a href="https://www.facebook.com/Acecraft-2420817978140298/">
+            <img src="http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/FB.png" class="" height="50px">
+            </a>
+
+            <a  href="https://www.instagram.com/acecraft.in/">
+                <img src="http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Insta.png" class="" height="50px">
+                </a>
+
+                <a  href="https://www.linkedin.com/in/acecraft-clothing-4b451445/">
+                    <img src="http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Lnkdin.png" class="" height="50px">
+                    </a>
+
+    </div>
+</p-sidebar>
+
+
+<i class="fa-solid fa-bars" style="background-color: black;color: white;" (click)="sidebarVisible = true"></i>
+
+

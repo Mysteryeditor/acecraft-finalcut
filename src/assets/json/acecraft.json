@@ -360,5 +360,14 @@
       "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d708bcbfb666ae1149973/webp/cisb-shorts-640x640.jpg"
     }
   ],
-  "cart": []
+  "cart": [],
+  "notes":[{
+    "id":1,
+    "title":"Styling Accessories that complement your formal wear"
+  },{
+    "id":2,
+    "title":"5 classic looks for her"
+  }
+
+  ]
 }

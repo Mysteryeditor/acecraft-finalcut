@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import { MenuItem } from 'primeng/api';
+
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  selector: 'app-sidemenu',
+  templateUrl: './sidemenu.component.html',
+  styleUrls: ['./sidemenu.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class SidemenuComponent implements OnInit {
+  menuItems: MenuItem[] | undefined;
   sidebarVisible: boolean = false
 
-  menuItems: MenuItem[] | undefined;
   ngOnInit(): void {
     this.menuItems = [{
       label: 'school', routerLink: 'school'
@@ -43,3 +44,4 @@ export class SidebarComponent implements OnInit {
   }
 
 }
+

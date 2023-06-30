@@ -1,7 +1,7 @@
 <div class="container-fluid sticky-top">
     <div class="row " style="background-color:black;">
         <div class="col-1 mt-2 ml-1 d-lg-none">
-            <app-sidebar></app-sidebar>
+
         </div>
         <div id="navbar"
             class="card col justify-content-center flex flex-wrap align-items-center container-fluid sticky-top">
@@ -18,7 +18,7 @@
                 <i class="pi pi-cog px-3 d-lg-none" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
                 <ul [hidden]="dropdownVisible" (mouseover)="dropdownVisible = false"
                     (mouseleave)="dropdownVisible = true" class="dropdown ">
-                    <li><a routerLink="signin">Sign-In</a><i class="fa-solid fa-right-to-bracket"></i></li>
+                    <li *ngIf="!userLoggedIn"><a routerLink="signin">Sign-In</a><i class="fa-solid fa-right-to-bracket"></i></li>
                     <li><a routerLink="register">Register</a><i class="fa-solid fa-user-plus"></i></li>
                     <li><a>Order Status</a><i class="fa-solid fa-box-archive"></i></li>
                     <li><a href="">Contact</a><i class="fa-solid fa-comments"></i></li>

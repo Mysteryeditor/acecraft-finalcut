@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { CartserviceService } from 'src/services/cartservice.service';
 import { UsersService } from 'src/services/users.service';
-import { cartDesc } from 'src/models/schools-list';
-import { usersData } from 'src/models/users';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -22,9 +20,11 @@ export class NavbarComponent implements OnInit {
 
   userList: any = []
 
+  userLoggedIn:boolean=false
 
 
-  userLoggedIn!: boolean
+
+
   userEmail!:string
 
 
@@ -32,6 +32,13 @@ export class NavbarComponent implements OnInit {
 
 
   ngOnInit() {
+
+    this.userlog.authSubject.subscribe(
+      data=>{
+        console.log(data);
+        this.userLoggedIn=data;
+      }
+    )
 
     this.items = [
       { label: 'SCHOOL', styleClass: 'navmenu', routerLink: '/school' },

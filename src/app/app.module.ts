@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule,Title } from '@angular/platform-browser';
-import { SidebarModule } from 'primeng/sidebar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -19,7 +18,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EnterpriseComponent } from './enterprise/enterprise.component';
 import { NotesComponent } from './notes/notes.component';
 import { AirenMaskComponent } from './airen-mask/airen-mask.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { ButtonModule } from 'primeng/button';
 import { SchoolComponent } from './school/school.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,6 +27,8 @@ import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
 import { SortPipePipe } from '../shared/sort-pipe.pipe';
 import { CommonModule } from '@angular/common';
+import { SidemenuComponent } from './sidemenu/sidemenu.component';
+import { SidebarModule } from 'primeng/sidebar';
 
 @NgModule({
   declarations: [
@@ -42,13 +42,13 @@ import { CommonModule } from '@angular/common';
     EnterpriseComponent,
     NotesComponent,
     AirenMaskComponent,
-    SidebarComponent,
     SchoolComponent,
     BrowseComponent,
     ListComponent,
     ProductComponent,
     CartComponent,
     SortPipePipe,
+    SidemenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,19 +56,14 @@ import { CommonModule } from '@angular/common';
     TabMenuModule,
     BadgeModule,
     CardModule,
-    SidebarModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     TimelineModule,
-    SidebarModule,
     ButtonModule,
     HttpClientModule,
-    CommonModule
-    
-    // FormControl,
-    // FormGroup
-    // Validators
+    CommonModule,
+    SidebarModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]

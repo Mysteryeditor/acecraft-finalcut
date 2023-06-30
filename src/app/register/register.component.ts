@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Form, FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms'
 import Swal from 'sweetalert2';
+import { environment } from 'src/environments/environment';
 import { usersData } from 'src/models/users';
 import { UsersService } from 'src/services/users.service';
 @Component({

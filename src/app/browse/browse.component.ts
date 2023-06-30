@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { SchoolsListService } from 'src/services/schools-list.service';
+import { SortPipePipe } from 'src/shared/sort-pipe.pipe';
 
 @Component({
   selector: 'app-browse',
