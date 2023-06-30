@@ -11,11 +11,12 @@
       "city": "Chennai",
       "state": "Tamil Nadu",
       "gstnumber": "GST@1234",
+      "isLogged":true,
       "id": 1
-    },
-    {
-      "firstName": "Kokki",
-      "lastName": "Kumar",
+    },{
+      "id":2,
+      "firstName": "sri",
+      "lastName": "kanth",
       "email": "sri@1223.com",
       "password": "abc@1234",
       "type": "school",
@@ -24,7 +25,8 @@
       "city": "Chennai",
       "state": "Tamil Nadu",
       "gstnumber": "GST@1234",
-      "id": 2
+      "isLogged":false
+      
     }
   ],
   "schoolsList": [

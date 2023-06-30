@@ -9,6 +9,6 @@ export interface usersData {
     city:string;
     state:string;
     gstnumber:string;
-    isLogged:false
+    isLogged:boolean;
     cart:any[];
 }

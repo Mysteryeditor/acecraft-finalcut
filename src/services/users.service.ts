@@ -7,7 +7,13 @@ import { usersData } from 'src/models/users';
 })
 export class UsersService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+
+  }
+
+
+  userLoggedIn: boolean = false;
+
 
 // for user registration
   url:string='http://localhost:3000/users';
@@ -22,9 +28,15 @@ export class UsersService {
     return this.http.get<usersData>(this.userUrl)
   }
 
-  gettingUserData(){
-    return this.http.get<usersData>(this.url);
-  }
+  
+
+ 
+
+  
+
+
+
+
 
  
 }
