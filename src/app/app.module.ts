@@ -27,7 +27,6 @@ import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
 import { SortPipePipe } from '../shared/sort-pipe.pipe';
 import { CommonModule } from '@angular/common';
-import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { SidebarModule } from 'primeng/sidebar';
 
 @NgModule({
@@ -48,7 +47,6 @@ import { SidebarModule } from 'primeng/sidebar';
     ProductComponent,
     CartComponent,
     SortPipePipe,
-    SidemenuComponent,
   ],
   imports: [
     BrowserModule,

@@ -72,11 +72,13 @@
    } */
 
     /* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) and (max-width:767px) {
+@media only screen and (min-width : 320px) and (max-width:767px) {
 
 .p-tabmenu-nav-content,ul {
  display: none;
      }
+
+
  
  
 

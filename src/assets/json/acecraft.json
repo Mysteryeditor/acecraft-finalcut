@@ -13,6 +13,21 @@
       "gstnumber": "GST@1234",
       "isLogged": true,
       "id": 1
+    },
+    {
+      "firstName": "Srikanth",
+      "lastName": "Sri",
+      "email": "sri027.cvb@gmail.com",
+      "password": "helloHello",
+      "type": "school",
+      "dealername": "hello",
+      "dealernumber": "sfavav",
+      "city": "asva",
+      "state": "Karnataka",
+      "gstnumber": "agvaebv",
+      "cart": [],
+      "isLogged": false,
+      "id": 2
     }
   ],
   "schoolsList": [
@@ -360,14 +375,72 @@
       "imgSrc": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/601d708bcbfb666ae1149973/webp/cisb-shorts-640x640.jpg"
     }
   ],
-  "cart": [],
-  "notes":[{
-    "id":1,
-    "title":"Styling Accessories that complement your formal wear"
-  },{
-    "id":2,
-    "title":"5 classic looks for her"
-  }
-
+  "cart": [
+    {
+      "id": 2,
+      "name": "NHG Shirt (Boys)",
+      "quantity": 1,
+      "price": 355,
+      "imgUrl": "https://d2pyicwmjx3wii.cloudfront.net/s/5997cc7c4d6e8ffa20e50aae/ms.products/5aa0f5c6f04705ab2ca345c6/images/5aa0f5c6f04705ab2ca345c7/5aa0f5d0f04705ab2ca345f9/webp/5aa0f5d0f04705ab2ca345f9-480x480.jpg",
+      "size": 28,
+      "originalPrice": 535,
+      "discount": 34,
+      "totalAmount": 0,
+      "subtotal": 0
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "Styling Accessories that complement your formal wear"
+    },
+    {
+      "id": 2,
+      "title": "5 classic looks for her"
+    },
+    {
+      "id": 3,
+      "title": "Acing your formal attire"
+    },
+    {
+      "id": 4,
+      "title": "Selecting & styling your workwear"
+    },
+    {
+      "id": 5,
+      "title": "Let's talk 'body types',women!"
+    },
+    {
+      "id": 6,
+      "title": "5 classic looks for him"
+    },
+    {
+      "id": 7,
+      "title": "Tips for a great outfit"
+    },
+    {
+      "id": 8,
+      "title": "Dressin to suceed: The importance of 'formals'"
+    },
+    {
+      "id": 9,
+      "title": "Workwear for all seasons: The women edit"
+    },
+    {
+      "id": 10,
+      "title": "The acecraft difference"
+    },
+    {
+      "id": 11,
+      "title": "Corporate to cupcakes!-story of a superwomen"
+    },
+    {
+      "id": 12,
+      "title": "How to complete your college look"
+    },
+    {
+      "id": 13,
+      "title": "Dress the right way to impress the right way"
+    }
   ]
 }

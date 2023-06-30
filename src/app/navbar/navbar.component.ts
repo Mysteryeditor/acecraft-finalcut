@@ -9,6 +9,8 @@ import { UsersService } from 'src/services/users.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+  menuItems: MenuItem[] | undefined;
+  sidebarVisible: boolean = false
 
   constructor(private router: Router, private cartCount: CartserviceService, private userlog: UsersService) { }
 
@@ -69,16 +71,14 @@ export class NavbarComponent implements OnInit {
     //     }
     //   }
     // });
+
+    
   }
 
 
 
   // for the sidebar    
   dropdownVisible: boolean = true;
-
-
-
-
 
 
 }

@@ -93,3 +93,33 @@
     overflow: hidden;
 
 } */
+
+@media only screen and (min-width : 320px) and (max-width:565px) {   
+         #banner1div {
+          position: absolute;
+          z-index: 1;
+          left: 10%; 
+          margin-top: -70px;
+          width: 80%;
+          text-align: center;
+          line-height: 25px;
+          height: 70px;
+      }
+
+      /* for the p tags */
+      #p1,#p2{
+        font-size: 20px;
+    }
+    
+    #p2{
+        font-weight: 800;
+    }
+
+    /* for the a tag */
+    #college{
+        font-size: 13px;
+        left: 10%;
+        margin-top: 10px;
+    }
+
+    } 

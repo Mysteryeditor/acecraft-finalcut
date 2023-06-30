@@ -1,35 +1,35 @@
 <div class="container-fluid sticky-top">
-    <div class="row " style="background-color:black;">
-        <div class="col-1 mt-2 ml-1 d-lg-none">
-
-        </div>
-        <div id="navbar"
-            class="card col justify-content-center flex flex-wrap align-items-center container-fluid sticky-top">
-            <a class="mt-3" id="acecraft" href="#">acecraft</a>
-
-            <p-tabMenu [model]="items" [activeItem]="activeItem"></p-tabMenu>
-            <span class="flex flex-row ml-auto px-5">
-
-                <!-- for the large screen navmenu -->
-                <i class="pi pi-cog px-3 d-sm-none d-lg-inline" (mouseleave)="dropdownVisible = true"
-                    (mouseover)="dropdownVisible = false" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
-
-                <!-- for the small screen sidebar -->
-                <i class="pi pi-cog px-3 d-lg-none" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
-                <ul [hidden]="dropdownVisible" (mouseover)="dropdownVisible = false"
-                    (mouseleave)="dropdownVisible = true" class="dropdown ">
-                    <li *ngIf="!userLoggedIn"><a routerLink="signin">Sign-In</a><i class="fa-solid fa-right-to-bracket"></i></li>
-                    <li><a routerLink="register">Register</a><i class="fa-solid fa-user-plus"></i></li>
-                    <li><a>Order Status</a><i class="fa-solid fa-box-archive"></i></li>
-                    <li><a href="">Contact</a><i class="fa-solid fa-comments"></i></li>
-                </ul>
-
-                <!-- the shopping cart -->
-                <i class="pi pi-shopping-cart  px-3" routerLink="cart" pBadge value="{{cartcount}}"
-                    style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
-
-            </span>
-        </div>
+  <div class="row " style="background-color:black;">
+    <div class="col-1 mt-2 ml-1 d-lg-none">
+      <i class="fa-solid fa-bars" style="background-color: black;color: white;" (click)="sidebarVisible = true"></i>
     </div>
+    <div id="navbar"
+      class="card col justify-content-center flex flex-wrap align-items-center container-fluid sticky-top">
+      <a class="mt-3" id="acecraft" href="#">acecraft</a>
+
+      <p-tabMenu [model]="items" [activeItem]="activeItem"></p-tabMenu>
+      <span class="flex flex-row ml-auto px-5">
+
+        <!-- for the large screen navmenu -->
+        <i class="pi pi-cog px-3 d-sm-none d-md-none d-lg-inline" (mouseleave)="dropdownVisible = true"
+          (mouseover)="dropdownVisible = false" style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
+          <ul [hidden]="dropdownVisible" (mouseover)="dropdownVisible = false" (mouseleave)="dropdownVisible = true"
+          class="dropdown ">
+          <li *ngIf="!userLoggedIn"><a routerLink="signin">Sign-In</a><i class="fa-solid fa-right-to-bracket"></i></li>
+          <li *ngIf="!userLoggedIn"><a routerLink="register">Register</a><i class="fa-solid fa-user-plus"></i></li>
+          <li><a>Order Status</a><i class="fa-solid fa-box-archive"></i></li>
+          <li><a>Contact</a><i class="fa-solid fa-comments"></i></li>
+        </ul>
+        <!-- for the small screen sidebar -->
+        <!-- <i class="pi pi-cog px-3 d-sm-inline d-md-inline d-lg-none" style="color: white;margin-top: -35px;font-size: 1.5em;"></i> -->
+       
+
+        <!-- the shopping cart -->
+        <i class="pi pi-shopping-cart  px-3" routerLink="cart" pBadge value="{{cartcount}}"
+          style="color: white;margin-top: -35px;font-size: 1.5em;"></i>
+
+      </span>
+    </div>
+  </div>
 
 </div>

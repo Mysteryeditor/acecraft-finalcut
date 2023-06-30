@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Form, FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms'
 import Swal from 'sweetalert2';
-import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 import { usersData } from 'src/models/users';
 import { UsersService } from 'src/services/users.service';
 @Component({
@@ -63,7 +63,7 @@ export class RegisterComponent implements OnInit {
   ];
   gstnumber!: FormControl;
 
-constructor(private user:UsersService){}
+constructor(private user:UsersService,private route:Router){}
 
   ngOnInit(): void {
     this.firstname = new FormControl('', [Validators.required,
@@ -144,6 +144,10 @@ constructor(private user:UsersService){}
       showConfirmButton:false,
       timer:2000
     });
+
+    this.route.navigate(['/signin']);
+
+
 
   }
 }

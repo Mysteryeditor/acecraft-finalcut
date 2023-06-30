@@ -3,13 +3,14 @@
     <p-card id="login-card" header="Login with ACECRAFT">
         <form #signin="ngForm" (ngSubmit)="signin.form.valid && onSubmit()" novalidate>
             <div class="form-group mb-3">
-                <input [(ngModel)]="obj.username" #username="ngModel" type="text" name="username" class="form-control"
-                    placeholder="username" [ngClass]="{'is-invalid':signin.submitted && username.invalid}" required>
+                <input [(ngModel)]="obj.email" #email="ngModel" type="email" name="email" class="form-control"
+                    placeholder="Email" [ngClass]="{'is-invalid':signin.submitted && email.invalid}" required>
 
-                <div class="invalid-feedback" *ngIf="signin.submitted && username.invalid">
-                    <!-- <p *ngIf="username.errors.required">
-                        The username is required
-                    </p> -->
+                <div class="invalid-feedback" *ngIf="signin.submitted && email.invalid">
+                    <p *ngIf="email.errors?.['required']">
+                        The Email is required
+                    </p>
+
 
 
                 </div>
@@ -21,7 +22,9 @@
                     [ngClass]="{'is-invalid':signin.submitted && password.invalid}">
 
                 <div class="invalid-feedback" *ngIf="signin.submitted && password.invalid ">
-
+                    <p *ngIf="password.errors?.['required']">
+                        The Password is required
+                    </p>
                 </div>
             </div>
 
