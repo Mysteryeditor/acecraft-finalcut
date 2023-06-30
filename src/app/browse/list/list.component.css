@@ -1,0 +1,10 @@
+.card-body button{
+    background-color: black;
+    color: white;
+    border: none;
+   
+}
+
+.btn-close{
+    font-size: x-small;
+}

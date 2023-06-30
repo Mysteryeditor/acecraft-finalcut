@@ -37,7 +37,7 @@ export class CartserviceService {
    updateCartItem(item:cartDesc){
     
     const Updateurl=this.cartUrl+'/'+item.id;
-    console.log(Updateurl);
+   
     return this.http.put(Updateurl,item).subscribe(()=>{
       const Toast=Swal.mixin({
         toast:true,

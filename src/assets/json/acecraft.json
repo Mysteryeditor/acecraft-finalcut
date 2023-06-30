@@ -11,22 +11,8 @@
       "city": "Chennai",
       "state": "Tamil Nadu",
       "gstnumber": "GST@1234",
-      "isLogged":true,
+      "isLogged": true,
       "id": 1
-    },{
-      "id":2,
-      "firstName": "sri",
-      "lastName": "kanth",
-      "email": "sri@1223.com",
-      "password": "abc@1234",
-      "type": "school",
-      "dealername": "drugs",
-      "dealernumber": "1245drugs.com",
-      "city": "Chennai",
-      "state": "Tamil Nadu",
-      "gstnumber": "GST@1234",
-      "isLogged":false
-      
     }
   ],
   "schoolsList": [

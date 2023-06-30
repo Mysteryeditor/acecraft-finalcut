@@ -10,6 +10,7 @@ export class BrowseComponent implements OnInit {
   sortToggle:boolean=true;
   pList:any[]=[]
   totalProducts:number=0;
+
   constructor(private produlist:SchoolsListService){}
 
   // sorting the data
