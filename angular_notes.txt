@@ -677,3 +677,10 @@ import the interface in service to receive the data.
 interface is created in the models folder
 
 
+add to cart:
+model-> for the set of properties should be displayed in the cart page
+service->
+
+
+
+
