@@ -682,5 +682,38 @@ model-> for the set of properties should be displayed in the cart page
 service->
 
 
+day9:30/6/2023
+--------------------
+Route Guard:
+They are the interfaces.
 
+Types:5
+----------
+1.)canActivate:
+*Mostly used
+*Implements canActivate()
+*Used to grant access
+
+2.)canDeactivateChild:
+
+3.)canDeactivate:
+
+4.)canLoad:
+
+5.)Resolve:
+
+
+export const environment={
+production:true,
+userapi:'url'
+}
+
+Steps for creating the authetication process:
+Service-usersservice====>Created
+
+ng g guard authentGuard---->create a guard
+1.)Create an authGuard
+
+sign in compo returns true/false to the service which has a subject 
+the subject is accessed by the guard and the access is manipulated.
 
