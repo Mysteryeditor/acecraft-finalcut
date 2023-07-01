@@ -24,7 +24,54 @@ export class NavbarComponent implements OnInit {
 
   userLoggedIn:boolean=false
 
+  sideBar:sideBarItems []=[
+    {
+      label:'school',
+      routerLink:'school'
+    },{
+      label:'college',
+      routerLink:'college'
+    },
+    {
+      label:'enterprise',
+      routerLink:'enterprise'
+    },
+    {
+      label:'notes',
+      routerLink:'notes'
+    },
+    {
+      label:'Airen Mask',
+      routerLink:'am'
+    },
+    {
+      label:'about',
+      routerLink:'about'
+    },
+    {
+      label:'care',
+      routerLink:'care'
+    },
+    {
+      label:'returns',
+      routerLink:'returns'
+    },
+    {
+      label:'production',
+      routerLink:'production'
+    },
 
+    {
+      label:'terms',
+      routerLink:'terms'
+    },
+    {
+      label:'get help',
+      routerLink:'get help'
+    },
+
+
+  ]
 
 
   userEmail!:string
@@ -77,8 +124,21 @@ export class NavbarComponent implements OnInit {
 
 
 
-  // for the sidebar    
+  // for the sidebar  
+
+  //left
   dropdownVisible: boolean = true;
+
+  //right
+  sidebarVisible2:boolean=false;
+
 
 
 }
+
+interface sideBarItems{
+  label : string,
+  routerLink:string
+}
+
+

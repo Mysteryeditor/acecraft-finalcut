@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import * as carddata from 'src/assets/json/enterprise-cards.json'
+import * as carddata from 'src/assets/json/enterprise-cards.json';
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-enterprise',
   templateUrl: './enterprise.component.html',
@@ -9,7 +10,8 @@ export class EnterpriseComponent {
   cards_arr: any = (carddata as any).default;
   events: EventItem[];
 
-  constructor() {
+  constructor(private title:Title) {
+    this.title.setTitle("Enterprise");
       this.events = [
           { icon: '1',  image: 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png','title':'single line brief' },
           { icon: '2', image: 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png' },

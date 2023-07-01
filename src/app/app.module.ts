@@ -61,7 +61,7 @@ import { SidebarModule } from 'primeng/sidebar';
     ButtonModule,
     HttpClientModule,
     CommonModule,
-    SidebarModule
+    SidebarModule 
   ],
   providers: [Title],
   bootstrap: [AppComponent]

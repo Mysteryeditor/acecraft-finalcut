@@ -8,7 +8,10 @@
     letter-spacing: 10px;
 }
 
-ul{
+/* for the navmenu in large screen */
+
+
+span ul{
     padding: 15px;
     list-style: none;
     text-align: right;
@@ -21,20 +24,38 @@ ul{
     width: 200px;
 }
 
-ul li{
+span ul li{
     color: gray;
     text-decoration: none;
     font-size: 15px;
 }
 
-ul li a{
+span ul li a{
     color: gray;
     text-decoration: none;
     font-size: 25px;
 }
 
 
-ul li:hover,ul li a:hover{
+span ul li:hover,span ul li a:hover{
     color: azure;
 }
 
+/* for the sidebar links */
+#sidebarItems{
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 1px solid rgb(222, 222, 222);
+    padding-bottom: 6px;
+}
+
+#sidebarItems a,.rightsidebar a{
+    color: rgb(23, 23, 23) !important;
+    text-decoration: none;
+    
+}
+
+.rightsidebar a{
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 1px solid rgb(222, 222, 222);
+    padding-bottom: 10px;
+}

@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NotesService } from 'src/services/notes.service';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
@@ -9,7 +9,9 @@ import { NotesService } from 'src/services/notes.service';
 })
 export class NotesComponent implements OnInit {
 
-  constructor(private noteserv:NotesService){}
+  constructor(private noteserv:NotesService,private title:Title){
+    this.title.setTitle('Blogs');
+  }
 
   notes:any
 

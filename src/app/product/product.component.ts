@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SchoolsListService } from 'src/services/schools-list.service';
 import { CartserviceService } from 'src/services/cartservice.service';
+import { Title } from '@angular/platform-browser';
 // for the cart description
 import { cartDesc } from 'src/models/schools-list';
 import Swal from 'sweetalert2';
@@ -61,7 +62,9 @@ export class ProductComponent implements OnInit {
 
  }
 
-  constructor(private sls:SchoolsListService,private carts:CartserviceService,private router:Router,private actroute:ActivatedRoute){}
+  constructor(private title:Title,private sls:SchoolsListService,private carts:CartserviceService,private router:Router,private actroute:ActivatedRoute){
+    
+  }
 
   ngOnInit(): void {
 
@@ -71,8 +74,13 @@ export class ProductComponent implements OnInit {
       this.sls.getSingleProduct(this.Pid).subscribe((response)=>{
         this.data=response;
         console.log(this.data);
+        this.title.setTitle(this.data[0].title);
       })
+
+      
   }
+
+
 
 
 }

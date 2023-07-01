@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Form, FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms'
 import Swal from 'sweetalert2';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { usersData } from 'src/models/users';
 import { UsersService } from 'src/services/users.service';
@@ -63,7 +64,9 @@ export class RegisterComponent implements OnInit {
   ];
   gstnumber!: FormControl;
 
-constructor(private user:UsersService,private route:Router){}
+constructor(private title:Title,private user:UsersService,private route:Router){
+  this.title.setTitle('register')
+}
 
   ngOnInit(): void {
     this.firstname = new FormControl('', [Validators.required,

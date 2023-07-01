@@ -11,4 +11,5 @@ export interface usersData {
     gstnumber:string;
     isLogged:boolean;
     cart:any[];
+   
 }

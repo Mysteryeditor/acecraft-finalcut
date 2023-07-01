@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SortPipePipe implements PipeTransform {
 
-  transform(value: Array<string>, ...args:any[]): any {
+  transform(value: Array<string>,args:any[]): any {
     const sortField = args[0]; 
     const sortDirection = args[1];
     let multiplier = 1;
@@ -15,6 +15,7 @@ export class SortPipePipe implements PipeTransform {
     }
 
     value.sort((a: any, b: any) => {
+      console.log(a,b);
       if (a[sortField] < b[sortField]) {
         return -1 * multiplier;
       } else if (a[sortField] > b[sortField]) {
@@ -22,8 +23,9 @@ export class SortPipePipe implements PipeTransform {
       } else {
         return 0;
       }
+    
     });
-
+    console.log(value);
     return value;
   }
   }

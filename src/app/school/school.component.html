@@ -86,7 +86,97 @@
         <p class="justify-content-center flex fs-4 fw-light">Establish a <span>signature look</span> for your school</p>
         <p class="justify-content-center flex mt-5 fs-4 fw-light">Looking to change your supplier?</p>
         <h2 class="justify-content-center flex">
-          <button class="flex col-md-6 ">Get In Touch</button>
+          <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="getintouch" class="flex col-md-6 col-lg-5">Get In Touch</button>
         </h2>
       </div>
+</div>
+
+<div class="align-items-center row">
+    <div class="modal fade mx-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h1 class="modal-title " id="staticBackdropLabel">Get your Uniforms designed and styled by Us!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" id="gitouch">
+                        <div class="row g-2">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <!-- <i style="position: absolute;margin-top: 20px;" class="fa fa-user icon">
+                                    </i> -->
+                                    <input type="text" class="form-control " id="firstname"
+                                        placeholder="First Name">
+                                    <label for="floatingInputGrid">First Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                                    <label for="floatingInputGrid">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-2 mt-2">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="Professional Email">
+                                    <label for="floatingInputGrid">Professional Email</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-2 mt-2">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="org" placeholder="Organisation">
+                                    <label for="floatingInputGrid">Organisation</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-2 mt-2">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="phone" placeholder="Phone No.">
+                                    <label for="floatingInputGrid">Phone No.</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row g-2 mt-2 d-flex ml-3">
+                            <p>Quantity Required</p>
+                            <div class="form-check col-lg-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="lowsets">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    10 - 50 Sets
+                                </label>
+                            </div>
+                            <div class="form-check col-lg-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="mediumsets"
+                                    checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    51 - 100 Sets
+                                </label>
+                            </div>
+                            <div class="form-check col-lg-4">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="highsets"
+                                    checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    100+ Sets
+                                </label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary col-12 rounded-pill">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>

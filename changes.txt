@@ -2,48 +2,43 @@ changes to be done
 Register component:
 -confirm password custom validation
 -checking whether the email already exists functionality
--email,password,gst number 
+-email,password,gst number-regex
 
 signin component:
 -forgot password
 -changing the user's islogged to true
 
 navbar component:
--sidebars (two)
 -active item marking
--hiding the acecraft logo and setting the height
 
 responsiveness:
 -all the components to be checked
 
 browse page:
 -quick view modal
--sorting
 
 products page:
 -size guide
 
 cart:
--clicking the product should redirect to the product
 -the quantity should be increased if the user tries to add an existing
 -updating the database and fetching the size and price and product Code
--few design(carousel,promo code & API)
+-few design(carousel,romo cde & API)
 
 school:
 -passing the url for each school and getting the corresponding data
 -few design matters
 
-
 enterprise:
 -honda page
--get in touch
+-timeline
+-get in touch validation
 
 notes:
 -component for each notes
 
 homepage:
--setting the routerlinks to the urls & responsiveness
+- responsiveness
 
 overall:
--changing the title for each component
 -updating the database

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { usersData } from 'src/models/users';
 import { Subject } from 'rxjs';
+import { cartDesc } from 'src/models/schools-list';
+import { AstMemoryEfficientTransformer } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -46,7 +48,14 @@ export class UsersService {
   userUrl:string=''
   authUser(email:string){
     this.userUrl=this.url+'?email_like='+email
-    return this.http.get<usersData>(this.userUrl)
+    return this.http.get<any>(this.userUrl)
+  }
+
+  //for updating the isLogged
+  updateIsloggedIn(item:any,id:number) {
+    const putUrl=this.url+'/'+id
+    item.isLogged=true
+    return this.http.put(putUrl,item).subscribe((res)=>{})
   }
 
   
