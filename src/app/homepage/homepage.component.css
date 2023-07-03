@@ -86,7 +86,13 @@
     margin-top: 700px;
 }
 
+#schoolsImg{
 
+   height: 100%;
+   width: 100%;
+    object-fit: cover;
+    object-position: 100% 10%;
+}
 /* #twocards img:hover{
     scale:inherit ;
     behavior: smooth;
@@ -120,6 +126,11 @@
         font-size: 13px;
         left: 10%;
         margin-top: 10px;
+    }
+
+    #l3card{
+        justify-content: center;
+        margin-top: 200px;
     }
 
     } 

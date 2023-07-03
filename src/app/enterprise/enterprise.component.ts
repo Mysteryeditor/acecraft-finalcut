@@ -17,8 +17,8 @@ export class EnterpriseComponent {
           { icon: '2', image: 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png' },
           { icon: '3', image: 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png' },
           {icon: '4',  image: 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png'},
-          {icon:'5',image: 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png'},
-          {icon:'6',image: 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png'}
+          //{icon:'5',image: 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png'},
+          //{icon:'6',image: 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png'}
       ];
   }
 

@@ -6,6 +6,7 @@ import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { usersData } from 'src/models/users';
 import { UsersService } from 'src/services/users.service';
+import { retry } from 'rxjs';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -81,7 +82,7 @@ constructor(private title:Title,private user:UsersService,private route:Router){
     ]);
     this.email = new FormControl('', [Validators.required, Validators.email])//pattern
     this.password=new FormControl('',[Validators.required,Validators.minLength(8)]),//pattern
-    // this.confirmpassword=new FormControl('',[Validators.required])
+  this.confirmpassword=new FormControl('',[Validators.required])
     this.schenter=new FormControl('',[Validators.required])
     this.dealername=new FormControl('',[Validators.required,Validators.minLength(3)]);
     this.dealernumber=new FormControl('',[Validators.required])
@@ -96,7 +97,7 @@ constructor(private title:Title,private user:UsersService,private route:Router){
       lastname: this.lastname,
       email: this.email,
       password:this.password,
-      // confirmpassword:this.confirmpassword,
+      confirmpassword:this.confirmpassword,
       schenter:this.schenter,
        dealername:this.dealername,
       dealernumber:this.dealernumber,
@@ -106,6 +107,9 @@ constructor(private title:Title,private user:UsersService,private route:Router){
 
     })
   }
+
+  // for the matching of the password and the confirm password
+
 
 
   userInfo:usersData=

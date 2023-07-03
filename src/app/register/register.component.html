@@ -53,14 +53,15 @@
                 </div>
 
                 <!--Confirm password-->
-                <!-- <div class="form-Group mb-3">
-                    <input type="password" class="form-control" formControlName="confirmpassword" [ngClass]="{'is-invalid':confirmpassword.errors && (confirmpassword.touched||confirmpassword.dirty),
+                <div class="form-Group mb-3">
+                    <input type="password" class="form-control" formControlName="confirmpassword" [ngClass]="{'is-invalid':(confirmpassword.errors) && (confirmpassword.touched||confirmpassword.dirty),
         'is-valid':confirmpassword.valid}" placeholder="Confirm Password">
 
                     <div class="invalid-feedback">
                         <strong>confirm password is Required</strong>
+                        <strong>Passwords Should Match</strong>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- radio button -->
 

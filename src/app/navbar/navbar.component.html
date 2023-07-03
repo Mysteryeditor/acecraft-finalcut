@@ -20,6 +20,8 @@
           <li *ngIf="!userLoggedIn"><a routerLink="register">Register</a><i class="fa-solid fa-user-plus"></i></li>
           <li><a>Order Status</a><i class="fa-solid fa-box-archive"></i></li>
           <li><a>Contact</a><i class="fa-solid fa-comments"></i></li>
+          <li *ngIf="userLoggedIn"><a (click)="logOut()">LogOut</a><i class="fa-solid fa-arrow-right-from-bracket ms-1"></i></li>
+
         </ul>
 
 
@@ -67,9 +69,10 @@
 <!-- the right sidebar -->
 <p-sidebar [(visible)]="sidebarVisible2" position="right">
   <div class="text-black container rightsidebar">
-    <a class="d-block" routerLink="signin">Sign-In</a>
-    <a class="d-block" routerLink="register">Register</a>
-    <a class="d-block" routerLink="/">Order Status</a>
-    <a class="d-block" routerLink="/">Contact</a>
+    <a (click)="sidebarVisible2=false" *ngIf="!userLoggedIn" class="d-block" routerLink="signin">Sign-In</a>
+    <a (click)="sidebarVisible2=false" *ngIf="!userLoggedIn" class="d-block" routerLink="register">Register</a>
+    <a (click)="sidebarVisible2=false" class="d-block" routerLink="/">Order Status</a>
+    <a (click)="sidebarVisible2=false" class="d-block" routerLink="/">Contact</a>
+    <a (click)="logOut()" class="d-block" *ngIf="userLoggedIn">LogOut</a>
   </div>
 </p-sidebar>

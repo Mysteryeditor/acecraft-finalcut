@@ -6,7 +6,7 @@ Register component:
 
 signin component:
 -forgot password
--changing the user's islogged to true
+
 
 navbar component:
 -active item marking
@@ -15,7 +15,7 @@ responsiveness:
 -all the components to be checked
 
 browse page:
--quick view modal
+-quick view modal!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 products page:
 -size guide
@@ -42,3 +42,4 @@ homepage:
 
 overall:
 -updating the database
+-changing the islogged to false

@@ -4,6 +4,7 @@ import { usersData } from 'src/models/users';
 import { Subject } from 'rxjs';
 import { cartDesc } from 'src/models/schools-list';
 import { AstMemoryEfficientTransformer } from '@angular/compiler';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -30,12 +31,13 @@ export class UsersService {
     return this.value;
   }
 
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient,private route:Router) { 
 
   }
 
 
   userLoggedIn: boolean = false;
+ 
 
 
 // for user registration
@@ -56,6 +58,32 @@ export class UsersService {
     const putUrl=this.url+'/'+id
     item.isLogged=true
     return this.http.put(putUrl,item).subscribe((res)=>{})
+  }
+
+  loginEmail:string=''
+
+  // for the logout
+
+  // getting the data of the user who is active
+  getActiveUser(){
+    const activeUrl=this.url+'?isLogged=true'
+    console.log(activeUrl);
+    return this.http.get<any>(activeUrl);
+  }
+
+  activeUser:any//data of active user
+
+  // to put back the updated data
+  logOutUser(){
+    this.getActiveUser().subscribe((res)=>{
+      this.activeUser=res
+      const activeUrl=this.url+'/'+this.activeUser[0].id;
+      this.activeUser[0].isLogged=false;
+      this.route.navigate(['/']);
+      return this.http.put(activeUrl,this.activeUser[0]).subscribe();
+      
+    })
+
   }
 
   

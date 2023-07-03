@@ -104,6 +104,7 @@ export class NavbarComponent implements OnInit {
     })
 
 
+// for the logout
 
 
 
@@ -120,6 +121,11 @@ export class NavbarComponent implements OnInit {
     // });
 
     
+  }
+
+  logOut(){
+    this.userLoggedIn=false;
+    this.userlog.logOutUser();
   }
 
 

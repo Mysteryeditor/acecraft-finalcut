@@ -19,7 +19,7 @@ export class ListComponent implements OnInit{
     this.buttonHide=true;
   }
 
-  constructor(private r:Router,private modal:SchoolsListService){}
+  constructor(private r:Router,private sls:SchoolsListService){}
   @Input()
 products:any;
 
@@ -32,15 +32,28 @@ ngOnInit(): void {
 }
 
 getData(){
-  this.modal.getSingleProduct(this.productId).subscribe((response)=>{
+  this.sls.getSingleProduct(this.productId).subscribe((response)=>{
     this.singleProductData=response;
     console.log(this.singleProductData)
+  })
+}
+
+// for the quickview modal
+quickDetails:any
+quickView(id:number){
+  console.log(id)
+  this.sls.getSingleProduct(id).subscribe((response)=>{
+    console.log(response);
+this.quickDetails=response;
   })
 
 }
 
+
+
+
 viewProduct(id:number){
-this.productId=id;
+// this.productId=id;
 this.r.navigate(['product/'+id])
 }
 }

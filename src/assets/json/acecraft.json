@@ -11,6 +11,7 @@
       "city": "Chennai",
       "state": "Tamil Nadu",
       "gstnumber": "GST@1234",
+      "cart": [],
       "isLogged": false,
       "id": 1
     },
