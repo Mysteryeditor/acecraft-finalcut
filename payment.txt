@@ -1,0 +1,7 @@
+create a stripe account
+payments->developers->api key
+generate an api key
+
+
+token is used in the angular application
+
