@@ -27,7 +27,7 @@
       "state": "Karnataka",
       "gstnumber": "agvaebv",
       "cart": [],
-      "isLogged": false,
+      "isLogged": true,
       "id": 2
     }
   ],
@@ -380,7 +380,19 @@
   "notes": [
     {
       "id": 1,
-      "title": "Styling Accessories that complement your formal wear"
+      "title": "Styling Accessories that complement your formal wear",
+      "date": "Nov 16, 2019",
+      "desc": "Formal wear only serves as the base - it’s the accessories you adorn that perfect the quintessential formal look. However, styling plays a massive role in the same. It should ideally have a little bit of everything to make your formal look a truly distinctive one. Here are a few tips on how you can style your formal wear: ",
+      "listHead1": "Accessories For Men - Tips: ",
+      "listPoints": [
+        {
+          "heading": "Pocket Squares",
+          "description": "These are a great, suave addition to your formal look. It’s not always necessary that your pocket square should match your formal wear - it just shouldn't clash with it drastically."
+        }
+      ],
+      "listHead2": "Accessories For Women - Tips: ",
+      "listPoints2": [],
+      "conclusion": "For both men and women, getting your accessories right is an integral part of nailing the formal look. However, unless the base is right, the impact you create won’t be an effective one - start by finding customised workwear that complements your frame to a tee at Acecraft! "
     },
     {
       "id": 2,
@@ -429,6 +441,38 @@
     {
       "id": 13,
       "title": "Dress the right way to impress the right way"
+    }
+  ],
+  "timeline": [
+    {
+      "id": 1,
+      "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png",
+      "title": "Single line brief"
+    },
+    {
+      "id": 2,
+      "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-2.png",
+      "title": "Mind mapping"
+    },
+    {
+      "id": 3,
+      "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-3.png",
+      "title": "Design and details"
+    },
+    {
+      "id": 4,
+      "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-4.png",
+      "title": "Sampling"
+    },
+    {
+      "id": 5,
+      "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-5.png",
+      "title": "Manufacturing"
+    },
+    {
+      "id": 6,
+      "img": "http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-6.png",
+      "title": "Delivery"
     }
   ]
 }

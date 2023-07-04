@@ -1,0 +1,59 @@
+<div class="container">
+    <!-- no of comments -->
+    <div id="commentcount">
+        0 comment
+    </div>
+
+    <div>
+        <h5>Leave a Comment</h5>
+
+
+        <form id="reviewform" #review="ngForm" (ngSubmit)="review.form.valid && onSubmit()" novalidate>
+
+            <div class="form-group mb-3">
+                <input class="form-control col-lg-6" required [(ngModel)]="obj.reviewer" #reviewer="ngModel" type="reviewer"
+                    name="reviewer" placeholder="reviewer"
+                    [ngClass]="{'is-invalid':review.submitted && reviewer.invalid}">
+
+                <div class="invalid-feedback" *ngIf="review.submitted && reviewer.invalid ">
+                    <p *ngIf="reviewer.errors?.['required']">
+                        The reviewer is required
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="form-group mb-3">
+                <input [(ngModel)]="obj.email" #email="ngModel" type="email" name="email" class="form-control"
+                    placeholder="Email" [ngClass]="{'is-invalid':review.submitted && email.invalid}" required>
+
+                <div class="invalid-feedback" *ngIf="review.submitted && email.invalid">
+                    <p *ngIf="email.errors?.['required']">
+                        The Email is required
+                    </p>
+
+
+
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <textarea placeholder="Message" [(ngModel)]="obj.message" #message="ngModel"
+                    [ngClass]="{'is-invalid':review.submitted && message.invalid}" class="form-control" name="message"
+                     cols="30" rows="10" required></textarea>
+
+
+                <div class="invalid-feedback" *ngIf="review.submitted && message.invalid">
+                    <p *ngIf="message.errors?.['required']">
+                        The Email is required
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <button type="submit" class="bg-dark col-lg-12 col-sm-12">Post Comment</button>
+        </form>
+    </div>
+</div>

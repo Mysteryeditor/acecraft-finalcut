@@ -39,6 +39,11 @@
     transform: scale(0.9);
 }
 
+.c-gray{
+    color: #978989;
+}
+
+
 #final-layer{
     background-color: black;
 }

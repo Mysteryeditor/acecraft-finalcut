@@ -28,6 +28,8 @@ import { CartComponent } from './cart/cart.component';
 import { SortPipePipe } from '../shared/sort-pipe.pipe';
 import { CommonModule } from '@angular/common';
 import { SidebarModule } from 'primeng/sidebar';
+import { SingleNoteComponent } from './notes/single-note/single-note.component';
+import { FeedbackformComponent } from './notes/feedbackform/feedbackform.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { SidebarModule } from 'primeng/sidebar';
     ProductComponent,
     CartComponent,
     SortPipePipe,
+    SingleNoteComponent,
+    FeedbackformComponent,
   ],
   imports: [
     BrowserModule,

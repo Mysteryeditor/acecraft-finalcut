@@ -3,7 +3,7 @@
 
     <div class="row justify-content-center d-flex align-items-center">
         <div class="card col-lg-5 col-sm-10 col-md-10 mx-3 mb-5 p-1 " *ngFor="let n of notes">
-            <div class="card-body mb-5 bg-black text-white text-center">
+            <div routerLink="/singlenote/{{n.id}}" class="card-body mb-5 bg-black text-white text-center">
                 <h6 class="fw-light"> {{n.title|uppercase}}
                 </h6>
             </div>

@@ -38,10 +38,24 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid bg-black">
+    <h1 class="text-center py-5 c-gray">
+        This is how we do it
+    </h1>
 
 
-
+    <!-- the card if the screen is md/sm -->
+    <div class="row d-lg-none mx-auto justify-content-center">
+        <div class="card bg-transparent" *ngFor="let t of timeLineData">
+            <div class="card-title text-center c-gray">{{t.id}}</div>
+            <div class="card-body text-center">
+                <img class="img-fluid w-50" src="{{t.img}}" alt="">
+                <h1 class="c-gray">
+                    {{t.title}}
+                </h1>
+            </div>
+        </div>
+    </div>
 </div>
 
 

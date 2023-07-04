@@ -1,0 +1,36 @@
+<div class="container-fluid" *ngFor="let i of notesData">
+<h3 class="text-center" *ngIf="i.date">{{i.date}}</h3>
+<div class="container">
+    <h1 class="text-center">{{i.title}}</h1>
+    
+    <p class="col-lg-6 offset-lg-3">{{i.desc}}</p>
+    <h6 class="col-lg-6 offset-lg-3" *ngIf="i.listHead1">{{i.listHead1}}</h6>
+    <ul class="col-lg-6 offset-lg-3" *ngIf="i.listPoints" >
+<li *ngFor="let x of i.listPoints">
+    <b>
+        {{x.heading}}-
+    </b>
+    <span>{{x.description}}</span>
+</li>
+    </ul>
+
+    <h6 class="col-lg-6 offset-lg-3" *ngIf="i.listHead2">{{i.listHead2}}</h6>
+
+    <ul *ngIf="i.listPoints2">
+
+        <li *ngFor="let x of i.listPoints2">
+            <b>
+                {{x.heading}}-
+            </b>
+            <span>{{x.description}}</span>
+        </li>
+
+    </ul>
+
+
+    <h6 class="col-lg-6 offset-lg-3" *ngIf="i.conclusion">Conclusion</h6>
+    <p class="col-lg-6 offset-lg-3" *ngIf="i.conclusion">{{i.conclusion}}</p>
+
+</div>
+</div>
+<app-feedbackform></app-feedbackform>

@@ -15,4 +15,10 @@ export class NotesService {
     return this.http.get<notes>(this.notesUrl)
   }
 
+
+  getSingleNote(id:number){
+    const singleNoteUrl=this.notesUrl+'?id='+id;
+    return this.http.get<any>(singleNoteUrl)
+  }
+
 }
