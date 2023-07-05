@@ -21,7 +21,9 @@ const routes: Routes = [
   { path: 'enterprise', component: EnterpriseComponent },
   { path: 'blogs', component: NotesComponent },
   { path: 'am', component: AirenMaskComponent },
-  { path: 'school', component: SchoolComponent,canActivate:[AuthGuard] },
+  { path: 'school', component: SchoolComponent,
+  //canActivate:[AuthGuard] 
+},
   {
     path:'browse',
     component:BrowseComponent

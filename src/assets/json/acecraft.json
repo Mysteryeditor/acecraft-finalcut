@@ -27,7 +27,7 @@
       "state": "Karnataka",
       "gstnumber": "agvaebv",
       "cart": [],
-      "isLogged": true,
+      "isLogged": false,
       "id": 2
     }
   ],
@@ -447,7 +447,8 @@
     {
       "id": 1,
       "img": "https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/icon-1.png",
-      "title": "Single line brief"
+      "title": "Single line brief",
+      "color": "black"
     },
     {
       "id": 2,

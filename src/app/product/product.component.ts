@@ -28,35 +28,58 @@ export class ProductComponent implements OnInit {
   totalAmount:0,
   subtotal:0
  }
-
+ gotItem=false;
 //  quantity:number=1
 //  size:any=''
-
+existingItems:any
  addToCart(i:any){
-  this.cart.name=i.title;
-  this.cart.price=i.price;
-  this.cart.quantity=this.cart.quantity;
-  this.cart.originalPrice=i.originalPrice;
-  this.cart.imgUrl=i.imgSrc;
-  this.cart.size=this.cart.size;
-  this.cart.totalAmount=0;
-  this.cart.id=i.id;
-  this.cart.discount=i.offerPercent;
-  this.carts.addToCart(this.cart);
-  console.log(i.id);
+  
+  this.carts.getFromCart().subscribe((res)=>{
+    this.existingItems=res;
+    for (const m of this.existingItems) {
+      this.gotItem=true;
+      console.log("in for")
+      console.log(m)
+      if(m.name==i.title){
+        console.log("if");
+        m.quantity++;
+        this.carts.updateCartItem(m);
+        alert("Item already added to the Cart");
+        
+      }  
+      else{
+        this.gotItem=false
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: 'top',
-    showConfirmButton: false,
-    timer: 3000,
-   
+      } 
+    }
+    if(this.gotItem==false){
+      this.cart.name=i.title;
+        this.cart.price=i.price;
+        this.cart.quantity=this.cart.quantity;
+        this.cart.originalPrice=i.originalPrice;
+        this.cart.imgUrl=i.imgSrc;
+        this.cart.size=this.cart.size;
+        this.cart.totalAmount=0;
+        this.cart.id=i.id;
+        this.cart.discount=i.offerPercent;
+        this.carts.addToCart(this.cart);
+      
+      
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          timer: 3000,
+         
+        })
+      
+        Toast.fire({
+          icon: 'success',
+          title: 'Item added successfully'
+        })
+    }
   })
-
-  Toast.fire({
-    icon: 'success',
-    title: 'Item added successfully'
-  })
+ 
 
   
 

@@ -57,7 +57,7 @@ export class SigninComponent {
             this.userid=this.userobj[0].id;
             this.auth.updateIsloggedIn(this.userobj[0],this.userid);
            console.log(this.userobj[0])
-            this.r.navigate(['', '/']);
+            this.r.navigate([ '/']);
           } 
           else //if the authentication failed
            {

@@ -6,7 +6,7 @@ import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { usersData } from 'src/models/users';
 import { UsersService } from 'src/services/users.service';
-import { retry } from 'rxjs';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -81,7 +81,7 @@ constructor(private title:Title,private user:UsersService,private route:Router){
     Validators.minLength(3)
     ]);
     this.email = new FormControl('', [Validators.required, Validators.email])//pattern
-    this.password=new FormControl('',[Validators.required,Validators.minLength(8)]),//pattern
+    this.password=new FormControl('',[Validators.required,Validators.minLength(8),Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}$')]),//pattern
   this.confirmpassword=new FormControl('',[Validators.required])
     this.schenter=new FormControl('',[Validators.required])
     this.dealername=new FormControl('',[Validators.required,Validators.minLength(3)]);

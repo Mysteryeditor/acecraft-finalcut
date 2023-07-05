@@ -35,14 +35,48 @@
     box-shadow: 6px 6px 6px 6px;
 }
 
-#cardslayer .card:hover{
+/* #cardslayer .card:hover{
     transform: scale(0.9);
-}
+} */
 
 .c-gray{
     color: #978989;
 }
 
+/* for the timeline */
+.custom-marker{
+    padding: 3px;
+    font-size: 18px;
+}
+
+.p-timeline-event{
+    padding-left: 30px !important;
+}
+
+.timeline{
+    overflow-x: hidden !important;
+    background-color: black;
+    border: none !important; 
+}
+
+.card{
+    border: none;
+    background-color: black;
+}
+
+.timeline .row:nth-child(1){
+    height: 15vh;
+    font-size: 35px;
+    font-weight: bolder;
+    color: #978f8f;
+}
+
+.timeline .row:nth-child(2){
+    width: 100%;
+    --bs-gutter-x: none;
+    height: 50vh;
+    background-color: black;
+}
 
 #final-layer{
     background-color: black;
@@ -52,4 +86,45 @@
     background-size: cover;
     min-height: 650px;
 
+}
+
+/* get in touch layer*/
+#final-layer .container{
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+   
+ 
+ }
+
+
+ #layer5content{
+    margin-top: -700px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    height: 180px;
+    color: #978f8f;
+ }
+ 
+ #line1 {
+     font-size: 15px;
+     margin-bottom: 0 !important;
+ }
+ 
+ #line2 {
+     font-size: 18px;
+ }
+ 
+ #line3 {
+     font-size: 15px;
+     font-family: 'Courier New', Courier, monospace;
+ }
+
+#getintouch {
+    border: 1px solid white;
+    background-color: transparent;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: 600
 }

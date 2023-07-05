@@ -12,7 +12,9 @@ export class NavbarComponent implements OnInit {
   menuItems: MenuItem[] | undefined;
   sidebarVisible: boolean = false
 
-  constructor(private router: Router, private cartCount: CartserviceService, private userlog: UsersService) { }
+  constructor(private router: Router, private cartCount: CartserviceService, private userlog: UsersService) { 
+ 
+  }
 
   items!: MenuItem[];
 
@@ -38,7 +40,7 @@ export class NavbarComponent implements OnInit {
     },
     {
       label:'notes',
-      routerLink:'notes'
+      routerLink:'blogs'
     },
     {
       label:'Airen Mask',
@@ -89,6 +91,17 @@ export class NavbarComponent implements OnInit {
       }
     )
 
+    this.userlog.getActiveUser().subscribe((res)=>{
+      console.log(res.length);
+     if(res.length>0){
+       this.userLoggedIn=true;
+     }
+     else{
+       this.userLoggedIn=false;
+     }
+   })
+ 
+
     this.items = [
       { label: 'SCHOOL', styleClass: 'navmenu', routerLink: '/school' },
       { label: 'COLLEGE', routerLink: 'college' },
@@ -104,7 +117,7 @@ export class NavbarComponent implements OnInit {
     })
 
 
-// for the logout
+
 
 
 
@@ -122,7 +135,7 @@ export class NavbarComponent implements OnInit {
 
     
   }
-
+// for the logout
   logOut(){
     this.userLoggedIn=false;
     this.userlog.logOutUser();

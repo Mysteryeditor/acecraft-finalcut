@@ -17,10 +17,11 @@
   </div>
 
   <!-- start of second layer -->
-  <div id="twocards" class="flex ">
+  <div id="twocards" class="container-fluid ">
     <div class="row">
+    
       <div class="col-lg-6 col-sm-6">
-        <div class="card  d-flex justify-content-center align-items-center" style="width: 100%; height: 700px;">
+        <div class="card col-lg-6 col-sm-6"   style="width: 100%; height: 700px;">
           <img id="schoolsImg" class="card-img-top  img-fluid"
             bind-src="layer2bg" alt="Card image cap">
           <div class="card-img-overlay text-center">
@@ -39,9 +40,10 @@
         </div>
       </div>
 
-      <div class="col-lg-6 col-sm-6">
-        <div class="card" style="width: 100%;padding: 0px;">
-          <img class="card-img-top img-fluid"
+
+<div class="col-lg-6 col-sm-6">
+        <div class="card col-lg-6 col-sm-6" style="width: 100%;padding: 0px; height: 700px;">
+          <img id="schoolsImg" class="card-img-top img-fluid"
             bind-src="layer2bg2" alt="Card image cap">
 
           <div class="card-img-overlay text-center">
@@ -49,7 +51,7 @@
               <p class="card-text text-secondary fs-3 fw-lighter ">workwear</p>
               <p class="card-text text-secondary fs-2 fw-bold ">redefined</p>
             </div>
-            <div class="card-text">
+            <div class="card-text col-12">
               <a routerLink="enterprise" id="college">
                 <span>acecraft for enterprises</span>
                 <span><i id="collegeid" class="fa-solid fa-chevron-right"></i></span>

@@ -38,7 +38,7 @@
 
 
 
-<div class="container-fluid bg-black">
+<div class="container-fluid d-lg-none bg-black">
     <h1 class="text-center py-5 c-gray">
         This is how we do it
     </h1>
@@ -63,5 +63,23 @@
 <div class="container-fluid" id="final-layer">
     <div class="row" [ngStyle]="{'background-image':b1}" *ngFor="let b1 of colbg" >
        
+    </div>
+
+    <div class="container" >
+        <div class="justify-content-center align-items-center offset-lg-6 col-lg-2" id="layer5content">
+            <p id="line1">
+                Designer Uniforms
+            </p>
+                <span>____________</span>
+                <span id="line2">
+                    by
+                </span>
+                <span>____________</span>
+            
+            <p id="line3" class="mt-1">acecraft</p>
+
+            <p><button id="getintouch" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Get In Touch</button></p>
+        </div>
+
     </div>
 </div>
