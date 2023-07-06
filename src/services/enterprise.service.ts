@@ -8,7 +8,7 @@ export class EnterpriseService {
 
   constructor(private http:HttpClient) { }
  
-timeLineUrl='http://localhost:3000/timeline'
+timeLineUrl='https://acecraft-json-kx5c.vercel.app/timeline'
 
 
  getTimelineEvents(){
