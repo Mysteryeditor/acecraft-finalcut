@@ -30,6 +30,7 @@ import { CommonModule } from '@angular/common';
 import { SidebarModule } from 'primeng/sidebar';
 import { SingleNoteComponent } from './notes/single-note/single-note.component';
 import { FeedbackformComponent } from './notes/feedbackform/feedbackform.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { FeedbackformComponent } from './notes/feedbackform/feedbackform.compone
     SortPipePipe,
     SingleNoteComponent,
     FeedbackformComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

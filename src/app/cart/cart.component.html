@@ -79,7 +79,7 @@
                         Continue Shopping
                     </button>
 
-                    <button [style.display]="!isHidden? 'none':'block'" class="mx-lg-3 mx-md-2 mx-sm-2">
+                    <button (click)="makePayment(50)" [style.display]="!isHidden? 'none':'block'" class="mx-lg-3 mx-md-2 mx-sm-2">
                         Place Order
                     </button>
 
@@ -90,3 +90,4 @@
 
 
 </div>
+
