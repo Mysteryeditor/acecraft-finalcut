@@ -9,7 +9,7 @@ export class NotesService {
 
   constructor(private http:HttpClient) { }
 
-  notesUrl='http://localhost:3000/notes'
+  notesUrl='https://acecraft-json-kx5c.vercel.app/notes'
 
   getNotes(){
     return this.http.get<notes>(this.notesUrl)

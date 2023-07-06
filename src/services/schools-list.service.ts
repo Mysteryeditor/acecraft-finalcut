@@ -10,13 +10,13 @@ export class SchoolsListService {
 
   constructor(private http:HttpClient) { }
 
-  url:string='http://localhost:3000/schoolsList';
+  url:string='https://acecraft-json-kx5c.vercel.app/schoolsList';
 
   getschoolsList(){
     return this.http.get<SchoolsList[]>(this.url);
   }
 
-  productsUrl:string='http://localhost:3000/Products';
+  productsUrl:string='https://acecraft-json-kx5c.vercel.app/Products';
 
   // to get all the Products
   getproductsList(){

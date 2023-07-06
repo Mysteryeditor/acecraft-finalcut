@@ -41,7 +41,7 @@ export class UsersService {
 
 
 // for user registration
-  url:string='http://localhost:3000/users';
+  url:string='https://acecraft-json-kx5c.vercel.app/users';
   postUser(info:usersData){
     return this.http.post<usersData >(this.url,info).subscribe((res)=>{})
   }

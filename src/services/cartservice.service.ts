@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 export class CartserviceService {
 
   url:string='';
-  cartUrl='http://localhost:3000/cart'
+  cartUrl='https://acecraft-json-kx5c.vercel.app/cart'
 
   constructor(private http:HttpClient) {
     this.url=this.cartUrl+'/';  
