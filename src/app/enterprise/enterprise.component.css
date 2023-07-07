@@ -35,9 +35,9 @@
     box-shadow: 6px 6px 6px 6px;
 }
 
-/* #cardslayer .card:hover{
+#cardslayer .card:hover{
     transform: scale(0.9);
-} */
+}
 
 .c-gray{
     color: #978989;

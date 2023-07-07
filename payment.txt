@@ -5,3 +5,34 @@ generate an api key
 
 token is used in the angular application
 
+Deployment
+api folder
+the file server.js
+in cmd
+npm init
+configure the package.json
+
+vercel.json
+same_code
+
+deployment project:
+npm install firebase
+
+npm audit fix --force
+
+
+npm install -g firebase-tools
+
+firebase login
+
+firebase init-initializing the firebase
+
+angular.json
+outputPath: should be placed as the public directory
+
+
+ng build --prod ----->deprecated
+
+ng build
+
+firebase deploy
