@@ -18,7 +18,7 @@ imgEnd='https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/BK,.jpg'
 ngOnInit(): void {
 this.title.setTitle('School');
 
-
+// the logos on the first layer
 this.sl.getschoolsList().subscribe((response)=>{
   this.schoolsList= response;
 })

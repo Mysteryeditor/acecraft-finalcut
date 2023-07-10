@@ -108,10 +108,7 @@ constructor(private title:Title,private user:UsersService,private route:Router){
     })
   }
 
-  // for the matching of the password and the confirm password
-
-
-
+  // the model to store the formdata
   userInfo:usersData=
     {
       firstName: '',
@@ -140,21 +137,14 @@ constructor(private title:Title,private user:UsersService,private route:Router){
     this.userInfo.state=this.statename.value;
     this.userInfo.city=this.city.value;
     this.userInfo.gstnumber=this.gstnumber.value;
-    this.user.postUser(this.userInfo)
+    this.user.postUser(this.userInfo);//function in the service
     
-
-
-
     Swal.fire({
       icon:'success',
       title:'Registered SuccessFully',
       showConfirmButton:false,
       timer:2000
     });
-
     this.route.navigate(['/signin']);
-
-
-
   }
 }
