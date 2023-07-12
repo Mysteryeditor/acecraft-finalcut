@@ -12,6 +12,7 @@ import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
 import { SingleNoteComponent } from './notes/single-note/single-note.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { AuthGuard } from 'src/shared/authent-guard.guard';
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -36,6 +37,9 @@ const routes: Routes = [
   }
   ,{
     path:'singlenote/:id',component:SingleNoteComponent
+  },
+  {
+    path:'chk',component:CheckoutComponent
   }
 ];
 
