@@ -8,21 +8,19 @@ import { SchoolsListService } from 'src/services/schools-list.service';
   styleUrls: ['./school.component.css']
 })
 export class SchoolComponent implements OnInit {
-constructor(private sl:SchoolsListService,private title:Title){
+  constructor(private sl: SchoolsListService, private title: Title) { }
+  schoolsList: any[] = []
 
-}
-schoolsList:any[]=[]
+  // the final image
+  imgEnd = 'https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/BK,.jpg'
+  ngOnInit(): void {
+    this.title.setTitle('School');
 
-// the final image
-imgEnd='https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/BK,.jpg'
-ngOnInit(): void {
-this.title.setTitle('School');
-
-
-this.sl.getschoolsList().subscribe((response)=>{
-  this.schoolsList= response;
-})
-}
+    // the 7 logos and title
+    this.sl.getschoolsList().subscribe((response) => {
+      this.schoolsList = response;
+    })
+  }
 
 
 }

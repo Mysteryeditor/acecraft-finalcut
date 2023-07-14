@@ -74,7 +74,7 @@
     /* Extra Small Devices, Phones */
 @media only screen and (min-width : 320px) and (max-width:767px) {
 
-.p-tabmenu-nav-content,ul {
+.p-tabmenu-nav-content{
  display: none;
      }
 

@@ -124,17 +124,18 @@
 
                 <!-- state -->
                 <div class="form-Group my-4">
-                <label class="text-secondary fw-bold">State</label>
-                <select [ngClass]="{'is-invalid':statename.errors && (statename.touched||statename.dirty),
-                'is-valid':statename.valid}" formControlName="statename"  class="form-select" aria-label="Default select example">
-                     
-                    <option *ngFor="let s of statelist" [value]=s>{{s}}</option>
-                  </select>
+                    <label class="text-secondary fw-bold">State</label>
+                    <select [ngClass]="{'is-invalid':statename.errors && (statename.touched||statename.dirty),
+                'is-valid':statename.valid}" formControlName="statename" class="form-select"
+                        aria-label="Default select example">
 
-                  <div class="invalid-feedback">
-                    <strong>Choose a State</strong>
+                        <option *ngFor="let s of statelist" [value]=s>{{s}}</option>
+                    </select>
+
+                    <div class="invalid-feedback">
+                        <strong>Choose a State</strong>
+                    </div>
                 </div>
-            </div>
 
 
                 <!--GST number-->
@@ -155,10 +156,12 @@
 
 
                 <div class="form-group">
-                    <button id="sumbitButton" class="bg-dark col-12 text-white" (click)="onSubmit()" [disabled]="signup.invalid" type="submit">Register</button>
+                    <button id="sumbitButton" class="bg-dark col-12 text-white" (click)="onSubmit()"
+                        [disabled]="signup.invalid" type="submit">Register</button>
                 </div>
             </form>
-<label class="text-secondary my-3 col-lg-7 col-md-6 offset-md-4 offset-lg-3">Already have an account?<a class="text-decoration-none text-dark" routerLink="/signin">Login!</a></label>
+            <label class="text-secondary my-3 col-lg-7 col-md-6 offset-md-4 offset-lg-3">Already have an account?<a
+                    class="text-decoration-none text-dark" routerLink="/signin">Login!</a></label>
         </p-card>
     </div>
 </div>

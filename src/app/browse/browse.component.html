@@ -15,11 +15,6 @@
 </div>
 
 <div class="container browse-page">
-
-    <!-- <div class="row d-flex">
-
-
-    </div> -->
     <div class="row d-flex" id="row1">
         <div class="text-black d-flex mt-5 col-lg-2">
             <h5>School</h5><span>-{{totalProducts}} items</span>
@@ -28,14 +23,14 @@
 
         <div class="ml-auto mt-5 col-lg-2">
 
-
+<!-- SORTING -->
             <select (change)="onOptionsSelected($event)">
                 <option value="" disabled selected hidden>SORT BY</option>
                 <option value="lth">Price : Low to High</option>
                 <option value="htl">Price : High to Low</option>
                 <option value="nasc">Name : Ascending Order</option>
                 <option value="ndesc">Name : Descending Order</option>
-              </select>
+            </select>
         </div>
     </div>
 
@@ -44,11 +39,10 @@
     </div>
 
     <div class="d-flex row">
-        <div  class="card col-4 mb-3 text-center justify-content-center align-items-center" *ngFor="let item of pList| sortPipe:[sortParam,sortDirection]">
+        <div class="card col-4 mb-3 text-center justify-content-center align-items-center"
+            *ngFor="let item of pList| sortPipe:[sortingParam,sortingDirection]">
 
-            <!-- <img class="card-img h-75" src="{{item.imgSrc}}" alt="">
-            <h6 class="card-title text-center">{{item.title}}</h6> -->
-
-<app-list [products]="item"></app-list>
+            <!-- child component -->
+            <app-list [products]="item"></app-list>
         </div>
     </div>

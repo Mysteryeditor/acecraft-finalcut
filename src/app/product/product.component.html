@@ -61,7 +61,7 @@
 
 
                         </div>
-                        <p id="n_items">items left in Stock</p>
+                        <!-- <p id="n_items">items left in Stock</p> -->
                         <div class="form-group" id="quantity">
                             <label class="text-white col-4">Quantity</label>
                             <input name="quantity" [(ngModel)]="cart.quantity" type="number" min="1" max="50"
@@ -72,6 +72,7 @@
 
                         <button class="mx-5 col-lg-3" (click)="addToCart(d1)">Add to Cart</button>
 
+                        <!-- adds to cart and routes to the cart component -->
                         <button class="col-lg-3" (click)="addToCart(d1)" routerLink="/cart">Buy Now</button>
                     </form>
                 </div>

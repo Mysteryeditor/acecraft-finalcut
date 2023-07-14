@@ -12,7 +12,7 @@ import { AirenMaskComponent } from './airen-mask/airen-mask.component';
 import { ProductComponent } from './product/product.component';
 import { CartComponent } from './cart/cart.component';
 import { SingleNoteComponent } from './notes/single-note/single-note.component';
-import { AuthGuard } from 'src/shared/authent-guard.guard';
+// import { AuthGuard } from 'src/shared/authent-guard.guard';
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'college', component: CollegeComponent },
@@ -21,21 +21,23 @@ const routes: Routes = [
   { path: 'enterprise', component: EnterpriseComponent },
   { path: 'blogs', component: NotesComponent },
   { path: 'am', component: AirenMaskComponent },
-  { path: 'school', component: SchoolComponent,
-  //canActivate:[AuthGuard] 
-},
   {
-    path:'browse',
-    component:BrowseComponent
+    path: 'school', component: SchoolComponent,
+    //canActivate:[AuthGuard] 
   },
   {
-    path:'product/:id',component:ProductComponent
+    path: 'browse',
+    component: BrowseComponent
+  },
+  //for retrieving the data of a particular product
+  {
+    path: 'product/:id', component: ProductComponent
   },
   {
-    path:'cart',component:CartComponent
+    path: 'cart', component: CartComponent
   }
-  ,{
-    path:'singlenote/:id',component:SingleNoteComponent
+  , {
+    path: 'singlenote/:id', component: SingleNoteComponent
   }
 ];
 

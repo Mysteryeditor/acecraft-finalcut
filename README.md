@@ -1,27 +1,46 @@
 # AcecraftFinalcut
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
-## Development server
+This Project is a website named ACECRAFT for uniform sales.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Components:(14)
+Airen-mask
+Browse
+-list
 
-## Code scaffolding
+Cart
+Checkout-future implementations
+College
+Enterprise
+Footer
+Homepage
+NavBar
+Notes
+-FeedbackForm
+-SingleNote
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Product
+Register
+School
+Sign-In
 
-## Build
+WorkFlow:
+Register->Login->View Products->Add To Cart->Payment
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Pipes Used:
+Sorting Pipe
 
-## Running unit tests
+Services used in this application are as follows:-
+users
+carts
+enterprise
+schools-list
+cart
+notesService
+ 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Packages Installed:
+PrimeNg
+BootStrap
+PrimeFlex
+Sweetalert2

@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="grid text-center bg-white justify-content-center">
         <div class="sm:col-2 md:col-2 lg:col-1 mt-lg-4" *ngFor="let school of schoolsList">
-            <a routerLink="/browse/{{school.router}}" class="text-center text-black">
+            <a routerLink="/browse/{{school.router}}" class="text-center text-black"><!--Routes to browse component-->
                 <img height="45" src="{{school.image}}" alt="logo"><br>
                 <label>{{school.name|uppercase}}</label>
             </a>
@@ -45,7 +45,7 @@
 
 <div class="container-fluid" id="layer3">
     <div class="layer3content row">
-<h1 class="text-center">Perfection. Now delivering to your doorstep.</h1>
+        <h1 class="text-center">Perfection. Now delivering to your doorstep.</h1>
     </div>
 
     <div class="layer3content2 row text-center">
@@ -58,39 +58,42 @@
 </div>
 
 <div class="container-fluid " id="layer4">
-<div class="container">
-    <div class="row text-end pt-5">
-<h1>Be at ease.</h1>
-<h1>Everyday.</h1>
+    <div class="container">
+        <div class="row text-end pt-5">
+            <h1>Be at ease.</h1>
+            <h1>Everyday.</h1>
 
-<p >Our uniforms keep your children looking great</p>
-   <p> from the first day of school until the end-of-the-year picnic.</p>
-    </div>
+            <p>Our uniforms keep your children looking great</p>
+            <p> from the first day of school until the end-of-the-year picnic.</p>
+        </div>
 
-    <div class="container text-center">
-        <img bind-src="imgEnd" class="img-fluid" alt="">
+        <div class="container text-center">
+            <img bind-src="imgEnd" class="img-fluid" alt="">
+        </div>
     </div>
-</div>
 </div>
 
 <div class="container-fluid d-flex justify-content-center align-items-center" id="layer5">
     <div class="content my-5 ">
         <h1>Designer Uniforms</h1>
         <div class="flex">
-          <h2>_____________</h2>
-          <h2>by</h2>
-          <h2>_____________</h2>
+            <h2>_____________</h2>
+            <h2>by</h2>
+            <h2>_____________</h2>
         </div>
         <p class="justify-content-center flex" id="ace">acecraft</p>
 
         <p class="justify-content-center flex fs-4 fw-light">Establish a <span>signature look</span> for your school</p>
         <p class="justify-content-center flex mt-5 fs-4 fw-light">Looking to change your supplier?</p>
         <h2 class="justify-content-center flex">
-          <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="getintouch" class="flex ">Get In Touch</button>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="getintouch" class="flex ">Get In
+                Touch</button>
         </h2>
-      </div>
+    </div>
 </div>
 
+
+<!-- the modal form -->
 <div class="align-items-center row">
     <div class="modal fade mx-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -105,10 +108,7 @@
                         <div class="row g-2">
                             <div class="col-md">
                                 <div class="form-floating">
-                                    <!-- <i style="position: absolute;margin-top: 20px;" class="fa fa-user icon">
-                                    </i> -->
-                                    <input type="text" class="form-control " id="firstname"
-                                        placeholder="First Name">
+                                    <input type="text" class="form-control " id="firstname" placeholder="First Name">
                                     <label for="floatingInputGrid">First Name</label>
                                 </div>
                             </div>

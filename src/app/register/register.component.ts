@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
   email!: FormControl;
   password!: FormControl;
   confirmpassword!: FormControl
-  schenter!:FormControl
+  schenter!: FormControl
   dealername!: FormControl;
   dealernumber!: FormControl;
   city!: FormControl;
@@ -65,9 +65,9 @@ export class RegisterComponent implements OnInit {
   ];
   gstnumber!: FormControl;
 
-constructor(private title:Title,private user:UsersService,private route:Router){
-  this.title.setTitle('register')
-}
+  constructor(private title: Title, private user: UsersService, private route: Router) {
+    this.title.setTitle('register')
+  }
 
   ngOnInit(): void {
     this.firstname = new FormControl('', [Validators.required,
@@ -81,38 +81,35 @@ constructor(private title:Title,private user:UsersService,private route:Router){
     Validators.minLength(3)
     ]);
     this.email = new FormControl('', [Validators.required, Validators.email])//pattern
-    this.password=new FormControl('',[Validators.required,Validators.minLength(8),Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}$')]),//pattern
-  this.confirmpassword=new FormControl('',[Validators.required])
-    this.schenter=new FormControl('',[Validators.required])
-    this.dealername=new FormControl('',[Validators.required,Validators.minLength(3)]);
-    this.dealernumber=new FormControl('',[Validators.required])
-    this.city=new FormControl('',[Validators.required]),
-    this.statename=new FormControl('',[Validators.required]);
+    this.password = new FormControl('', [Validators.required, Validators.minLength(8), Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}$')]),
+      this.confirmpassword = new FormControl('', [Validators.required])
+    this.schenter = new FormControl('', [Validators.required])
+    this.dealername = new FormControl('', [Validators.required, Validators.minLength(3)]);
+    this.dealernumber = new FormControl('', [Validators.required])
+    this.city = new FormControl('', [Validators.required]),
+      this.statename = new FormControl('', [Validators.required]);
 
-    this.gstnumber=new FormControl('',Validators.required)
+    this.gstnumber = new FormControl('', Validators.required)
 
 
     this.signup = new FormGroup({
       firstname: this.firstname,
       lastname: this.lastname,
       email: this.email,
-      password:this.password,
-      confirmpassword:this.confirmpassword,
-      schenter:this.schenter,
-       dealername:this.dealername,
-      dealernumber:this.dealernumber,
-      city:this.city,
-      statename:this.statename,
-      gstnumber:this.gstnumber
+      password: this.password,
+      confirmpassword: this.confirmpassword,
+      schenter: this.schenter,
+      dealername: this.dealername,
+      dealernumber: this.dealernumber,
+      city: this.city,
+      statename: this.statename,
+      gstnumber: this.gstnumber
 
     })
   }
 
-  // for the matching of the password and the confirm password
-
-
-
-  userInfo:usersData=
+  // an object to store the user details
+  userInfo: usersData =
     {
       firstName: '',
       lastName: '',
@@ -127,29 +124,29 @@ constructor(private title:Title,private user:UsersService,private route:Router){
       cart: [],
       isLogged: false
     }
-  
+
 
   onSubmit() {
-    this.userInfo.firstName=this.firstname.value;
-    this.userInfo.lastName=this.lastname.value;
+    // assigning the form values to object
+    this.userInfo.firstName = this.firstname.value;
+    this.userInfo.lastName = this.lastname.value;
     this.userInfo.email = this.email.value;
-    this.userInfo.type=this.schenter.value;
-    this.userInfo.password=this.password.value;
-    this.userInfo.dealername=this.dealername.value;
-    this.userInfo.dealernumber=this.dealernumber.value;
-    this.userInfo.state=this.statename.value;
-    this.userInfo.city=this.city.value;
-    this.userInfo.gstnumber=this.gstnumber.value;
+    this.userInfo.type = this.schenter.value;
+    this.userInfo.password = this.password.value;
+    this.userInfo.dealername = this.dealername.value;
+    this.userInfo.dealernumber = this.dealernumber.value;
+    this.userInfo.state = this.statename.value;
+    this.userInfo.city = this.city.value;
+    this.userInfo.gstnumber = this.gstnumber.value;
+    // posting the details into api
     this.user.postUser(this.userInfo)
-    
 
-
-
+    //a popup
     Swal.fire({
-      icon:'success',
-      title:'Registered SuccessFully',
-      showConfirmButton:false,
-      timer:2000
+      icon: 'success',
+      title: 'Registered SuccessFully',
+      showConfirmButton: false,
+      timer: 2000
     });
 
     this.route.navigate(['/signin']);

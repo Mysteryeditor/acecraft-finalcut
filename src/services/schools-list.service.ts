@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import{SchoolsList} from 'src/models/schools-list';
 import { Products } from 'src/models/schools-list';
 import { Subject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,13 +11,14 @@ export class SchoolsListService {
 
   constructor(private http:HttpClient) { }
 
-  url:string='https://acecraft-json-kx5c.vercel.app/schoolsList';
+  url=environment.schoolsListApi;
 
+  // the seven logos and titles
   getschoolsList(){
     return this.http.get<SchoolsList[]>(this.url);
   }
 
-  productsUrl:string='https://acecraft-json-kx5c.vercel.app/Products';
+  productsUrl=environment.productsApi;
 
   // to get all the Products
   getproductsList(){

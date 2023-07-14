@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { notes } from 'src/models/notes';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class NotesService {
 
   constructor(private http:HttpClient) { }
 
-  notesUrl='https://acecraft-json-kx5c.vercel.app/notes'
+  notesUrl=environment.notesApi;
 
   getNotes(){
     return this.http.get<notes>(this.notesUrl)

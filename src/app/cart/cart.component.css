@@ -1,81 +1,83 @@
-#itemRow{
+#itemRow {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-   
+
 }
 
-input{
+input {
     background-color: white;
     border: 2px solid rgb(70, 70, 68);
     width: 40px;
     text-align: center;
 }
 
-a:hover{
+a:hover {
     cursor: grab;
 }
 
-#continueshopping{
+#continueshopping {
     border: 2px solid black;
     height: 50px;
     color: black;
-    
+
     /* font-size: 20px; */
-   background-color: transparent;
+    background-color: transparent;
 
 }
 
 
-#continueshopping:hover{
+#continueshopping:hover {
     color: white;
-    background-color: black; 
+    background-color: black;
 }
 
 /* for the increment and decrement buttons */
-#quantity button{
-border: none;
-background: none;
-color: black;
+#quantity button {
+    border: none;
+    background: none;
+    color: black;
 }
 
 /* for the promo code section */
-#promocode input{
+#promocode input {
     width: 70%;
     border: 1px solid #978f8f;
     margin-right: 2px;
 }
 
-#promocode button{
+#promocode button {
     background-color: transparent;
     border: 1px solid black;
 }
 
 /* for the subtotal section */
-#subtotal label{
+#subtotal label {
     color: #978f8f;
     font-weight: 600;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
-#subtotal label:nth-child(2){
+
+#subtotal label:nth-child(2) {
     float: right;
     font-weight: 500;
 
 }
 
 
-#total label{
+#total label {
     color: #000000;
     font-weight: 300;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
-#total label:nth-child(2){
+
+#total label:nth-child(2) {
     float: right;
     font-weight: 500;
 }
 
-#total button{
+#total button {
     color: black;
     background-color: transparent;
     border: 1px solid black;

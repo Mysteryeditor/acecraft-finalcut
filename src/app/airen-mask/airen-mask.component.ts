@@ -5,10 +5,8 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './airen-mask.component.html',
   styleUrls: ['./airen-mask.component.css']
 })
-export class AirenMaskComponent{
-constructor(private title:Title){
-  this.title.setTitle("Airen Mask")
-}
-
-
+export class AirenMaskComponent {
+  constructor(private title: Title) {
+    this.title.setTitle("Airen Mask")
+  }
 }

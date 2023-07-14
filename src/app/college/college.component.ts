@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class CollegeComponent {
 
-  constructor(private title:Title){
+  constructor(private title: Title) {
     this.title.setTitle("College");
   }
 

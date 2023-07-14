@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { Router } from '@angular/router';
 import { CartserviceService } from 'src/services/cartservice.service';
 import { UsersService } from 'src/services/users.service';
 @Component({
@@ -12,96 +11,87 @@ export class NavbarComponent implements OnInit {
   menuItems: MenuItem[] | undefined;
   sidebarVisible: boolean = false
 
-  constructor(private router: Router, private cartCount: CartserviceService, private userlog: UsersService) { 
- 
-  }
+  constructor(private cartCount: CartserviceService, private userlog: UsersService) { }
+
 
   items!: MenuItem[];
 
   cartcount!: number
 
-  activeItem!: MenuItem;
-
   userList: any = []
 
-  userLoggedIn:boolean=false
+  userLoggedIn: boolean = false
 
-  sideBar:sideBarItems []=[
+  sideBar: sideBarItems[] = [
     {
-      label:'school',
-      routerLink:'school'
-    },{
-      label:'college',
-      routerLink:'college'
+      label: 'school',
+      routerLink: 'school'
+    }, {
+      label: 'college',
+      routerLink: 'college'
     },
     {
-      label:'enterprise',
-      routerLink:'enterprise'
+      label: 'enterprise',
+      routerLink: 'enterprise'
     },
     {
-      label:'notes',
-      routerLink:'blogs'
+      label: 'notes',
+      routerLink: 'blogs'
     },
     {
-      label:'Airen Mask',
-      routerLink:'am'
+      label: 'Airen Mask',
+      routerLink: 'am'
     },
     {
-      label:'about',
-      routerLink:'about'
+      label: 'about',
+      routerLink: 'about'
     },
     {
-      label:'care',
-      routerLink:'care'
+      label: 'care',
+      routerLink: 'care'
     },
     {
-      label:'returns',
-      routerLink:'returns'
+      label: 'returns',
+      routerLink: 'returns'
     },
     {
-      label:'production',
-      routerLink:'production'
-    },
-
-    {
-      label:'terms',
-      routerLink:'terms'
-    },
-    {
-      label:'get help',
-      routerLink:'get help'
+      label: 'production',
+      routerLink: 'production'
     },
 
-
+    {
+      label: 'terms',
+      routerLink: 'terms'
+    },
+    {
+      label: 'get help',
+      routerLink: 'get help'
+    },
   ]
 
-
-  userEmail!:string
-
-
-
-
-
   ngOnInit() {
-
+    //the value of the subject from the users service
     this.userlog.authSubject.subscribe(
-      data=>{
+      data => {
         console.log(data);
-        this.userLoggedIn=data;
+        this.userLoggedIn = data;
       }
     )
 
-    this.userlog.getActiveUser().subscribe((res)=>{
-      console.log(res.length);
-     if(res.length>0){
-       this.userLoggedIn=true;
-     }
-     else{
-       this.userLoggedIn=false;
-     }
-   })
- 
 
+    //to maintain state even after refreshing
+    this.userlog.getActiveUser().subscribe((res) => {
+      console.log(res.length);
+      if (res.length > 0) {
+        this.userLoggedIn = true;
+      }
+      else {
+        this.userLoggedIn = false;
+      }
+    })
+
+
+    //  the main menu Bar(TabMenu)
     this.items = [
       { label: 'SCHOOL', styleClass: 'navmenu', routerLink: '/school' },
       { label: 'COLLEGE', routerLink: 'college' },
@@ -110,38 +100,18 @@ export class NavbarComponent implements OnInit {
       { label: 'AIREN MASK', icon: 'pi pi-fw pi-cog', routerLink: 'am' }
     ];
 
-    this.activeItem = this.items[0];
 
+    // the cart count(badge)
     this.cartCount.getFromCart().subscribe((response) => {
       this.cartcount = response.length;
     })
-
-
-
-
-
-
-
-    // this.router.events.subscribe((event) => {
-    //   if (event instanceof NavigationEnd) {
-    //     const url = event.urlAfterRedirects;
-    //     const activeItem = this.items.find(item => item.routerLink === url);
-    //     if (activeItem) {
-    //       this.activeItem = activeItem;
-    //       localStorage.setItem('activeItemIndex', this.items.indexOf(activeItem).toString());
-    //     }
-    //   }
-    // });
-
-    
   }
-// for the logout
-  logOut(){
-    this.userLoggedIn=false;
+
+  // for the logout
+  logOut() {
+    this.userLoggedIn = false;
     this.userlog.logOutUser();
   }
-
-
 
   // for the sidebar  
 
@@ -149,15 +119,12 @@ export class NavbarComponent implements OnInit {
   dropdownVisible: boolean = true;
 
   //right
-  sidebarVisible2:boolean=false;
-
-
-
+  sidebarVisible2: boolean = false;
 }
 
-interface sideBarItems{
-  label : string,
-  routerLink:string
+interface sideBarItems {
+  label: string,
+  routerLink: string
 }
 
 

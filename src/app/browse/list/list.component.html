@@ -1,31 +1,4 @@
 <div class="card-body justify-content-center align-items-center">
-<img (mouseover)="buttonDisplay()" (mouseleave)="buttonVanish()" class="card-img h-75" (click)="viewProduct(products.id)" src="{{products.imgSrc}}" alt="product Image">
-
-<button data-bs-toggle="modal" data-bs-target="#quickview" type="button" class="card-text" (mouseover)="buttonDisplay()" (mouseleave)="buttonVanish()"  [hidden]="buttonHide" (click)="quickView(products.id)">QuickView</button>
-
-<h6>{{products.title}}</h6>
+    <img class="card-img h-75" (click)="viewProduct(products.id)" src="{{products.imgSrc}}" alt="product Image">
+    <h6>{{products.title}}</h6>
 </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="quickview" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl ">
-      <div class="modal-content">
-        
-          <button type="button" class="btn-close p-3 ml-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-      
-        <div class="modal-body">
-          <div class="row" *ngFor="let i of quickDetails">
-            
-            <div class="col-lg-2">
-                <!--the four images-->
-            </div>
-
-            <div class="col-lg-5">
-                <img src="{{i.imgSrc}}" alt="">
-            </div>
-          </div>
-        </div>
-       
-      </div>
-    </div>
-  </div>

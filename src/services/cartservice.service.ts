@@ -3,13 +3,14 @@ import { cartDesc } from 'src/models/schools-list';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import Swal from 'sweetalert2';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class CartserviceService {
 
   url:string='';
-  cartUrl='https://acecraft-json-kx5c.vercel.app/cart'
+  cartUrl=environment.cartapi
 
   constructor(private http:HttpClient) {
     this.url=this.cartUrl+'/';  
