@@ -108,8 +108,8 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  // an object to store the user details
-  userInfo: usersData =
+  // the model to store the formdata
+  userInfo:usersData=
     {
       firstName: '',
       lastName: '',
@@ -131,27 +131,21 @@ export class RegisterComponent implements OnInit {
     this.userInfo.firstName = this.firstname.value;
     this.userInfo.lastName = this.lastname.value;
     this.userInfo.email = this.email.value;
-    this.userInfo.type = this.schenter.value;
-    this.userInfo.password = this.password.value;
-    this.userInfo.dealername = this.dealername.value;
-    this.userInfo.dealernumber = this.dealernumber.value;
-    this.userInfo.state = this.statename.value;
-    this.userInfo.city = this.city.value;
-    this.userInfo.gstnumber = this.gstnumber.value;
-    // posting the details into api
-    this.user.postUser(this.userInfo)
-
-    //a popup
+    this.userInfo.type=this.schenter.value;
+    this.userInfo.password=this.password.value;
+    this.userInfo.dealername=this.dealername.value;
+    this.userInfo.dealernumber=this.dealernumber.value;
+    this.userInfo.state=this.statename.value;
+    this.userInfo.city=this.city.value;
+    this.userInfo.gstnumber=this.gstnumber.value;
+    this.user.postUser(this.userInfo);//function in the service
+    
     Swal.fire({
       icon: 'success',
       title: 'Registered SuccessFully',
       showConfirmButton: false,
       timer: 2000
     });
-
     this.route.navigate(['/signin']);
-
-
-
   }
 }
